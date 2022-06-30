@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.class.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 12:19:04 by jrasser           #+#    #+#             */
-/*   Updated: 2022/06/30 14:34:39 by jrasser          ###   ########.fr       */
+/*   Created: 2022/06/30 12:13:03 by jrasser           #+#    #+#             */
+/*   Updated: 2022/06/30 14:45:10 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "PhoneBook.class.hpp"
 #include "Contact.class.hpp"
 
-int main() {
-	
-	PhoneBook	instance_phonebook;
-	Contact		instance_contact;
+PhoneBook::PhoneBook (void) {
 
+	//std::cout << "Constructor called" << std::endl;
+	Contact tab[8];
+	return;
+}
 
-	return 0;
+PhoneBook::~PhoneBook (void) {
+	//std::cout << "Destructor" << std::endl;
+	return;
+}
+
+void	PhoneBook::add_contact(void) {
+
+}
+
+void	PhoneBook::search_contact(void) {
+
+}
+
+void	PhoneBook::exit(void) {
+
 }

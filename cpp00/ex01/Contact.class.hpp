@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   Contact.class.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 12:19:04 by jrasser           #+#    #+#             */
-/*   Updated: 2022/06/30 14:34:39 by jrasser          ###   ########.fr       */
+/*   Created: 2022/06/30 12:45:40 by jrasser           #+#    #+#             */
+/*   Updated: 2022/06/30 14:32:57 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.class.hpp"
-#include "Contact.class.hpp"
+#ifndef CONTACT_CLASS_H
+# define CONTACT_CLASS_H
 
-int main() {
-	
-	PhoneBook	instance_phonebook;
-	Contact		instance_contact;
+# include <iostream>
 
+class Contact {
 
-	return 0;
-}
+public:
+	Contact (void);
+	~Contact (void);
+
+private:
+	std::string	first_name;
+	std::string	last_name;
+	std::string	nickname;
+	std::string	phone_number;
+	std::string	darkest_secret;
+};
+
+#endif
