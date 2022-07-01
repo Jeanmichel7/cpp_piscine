@@ -17,7 +17,7 @@
 PhoneBook::PhoneBook (void) {
 
 	//std::cout << "Constructor called" << std::endl;
-	Contact tab[8];
+	//Contact tab_contact[8];
 	return;
 }
 
@@ -26,14 +26,28 @@ PhoneBook::~PhoneBook (void) {
 	return;
 }
 
-void	PhoneBook::add_contact(void) {
+void	PhoneBook::add_contact() {
 
+	std::string	str;
+
+	std::cout << "menu add contact : ";
+
+	std::cout << "first name : ";
+	std::cin >> str;
+	this->tab_contact[0].add_contact_first_name(str);
 }
 
-void	PhoneBook::search_contact(void) {
 
+
+
+
+
+
+
+void	PhoneBook::search_contact(void) {
+	std::cout << "search contact" << std::endl;
 }
 
 void	PhoneBook::exit(void) {
-
+	std::exit(0);
 }

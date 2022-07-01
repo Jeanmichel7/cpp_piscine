@@ -10,16 +10,16 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= 	phonebook.cpp \
+SRCS		= 	main.cpp \
 				PhoneBook.class.cpp \
 				Contact.class.cpp
 RM			= @rm -f
 NAME 		= phonebook
 CC			= g++ -std=c++98
-CFLAGS		= -Wall -Wextra -Werror
+CFLAGS		= -Wall -Wextra -g -fsanitize=address
 
 ${NAME}	:	${SRCS}
-			@${CC} -o ${NAME} ${SRCS}
+			@${CC} -o ${NAME} ${SRCS} ${CFLAGS}
 
 all :		${NAME}
 clean :

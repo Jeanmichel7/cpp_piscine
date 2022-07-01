@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= megaphone.cpp
+SRCS		= main.cpp |
 RM			= @rm -f
 NAME 		= megaphone
 CC			= g++ -std=c++98

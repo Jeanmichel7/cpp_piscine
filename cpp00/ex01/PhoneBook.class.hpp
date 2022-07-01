@@ -13,17 +13,20 @@
 #ifndef PHONEBOOK_CLASS_H
 # define PHONEBOOK_CLASS_H
 
+# include "Contact.class.hpp"
+
 class PhoneBook {
 
 public:
 	PhoneBook (void);
 	~PhoneBook (void);
-
-private:
-	void	add_contact(void);
+	void	add_contact();
 	void	search_contact(void);
 	void	exit(void);
-	
+
+//private:
+	Contact tab_contact[8];
+
 };
 
 #endif

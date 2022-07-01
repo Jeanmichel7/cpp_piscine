@@ -20,6 +20,7 @@ class Contact {
 public:
 	Contact (void);
 	~Contact (void);
+	void	add_contact_first_name(std::string str);
 
 private:
 	std::string	first_name;

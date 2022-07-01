@@ -14,8 +14,7 @@
 
 void	ft_put_word(char *str)
 {
-	for (int i = 0; str[i]; i++)
-	{
+	for (int i = 0; str[i]; i++) {
 		std::cout << (char) toupper(str[i]);
 	}
 }
@@ -27,8 +26,7 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else if (argc > 1)
-	{
+	else if (argc > 1) {
 		for (int i = 1; i < argc; i++) {
 			ft_put_word(argv[i]);
 		}
