@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.hpp                                :+:      :+:    :+:   */
+/*   main.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 12:13:07 by jrasser           #+#    #+#             */
-/*   Updated: 2022/06/30 14:45:11 by jrasser          ###   ########.fr       */
+/*   Created: 2022/07/01 23:13:35 by jrasser           #+#    #+#             */
+/*   Updated: 2022/07/01 23:13:36 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_CLASS_H
-# define PHONEBOOK_CLASS_H
+#ifndef MAIN_HPP
+# define MAIN_HPP
 
+# include <iostream>
+# include <limits>
+# include <string>
+# include "PhoneBook.class.hpp"
 # include "Contact.class.hpp"
+# include <stdio.h>
 
-class PhoneBook {
-
-public:
-	PhoneBook (void);
-	~PhoneBook (void);
-	void	add_contact();
-	void	search_contact(void);
-	void	display_phonebook(void);
-	void	exit(void);
-
-private:
-	Contact tab_contact[8];
-
-};
+void	ft_bad_input(std::string str);
+void	ft_clear_buffer();
+void	ft_display_tab_contact(Contact tab[]);
 
 #endif

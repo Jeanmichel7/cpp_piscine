@@ -12,7 +12,8 @@
 
 SRCS		= 	main.cpp \
 				PhoneBook.class.cpp \
-				Contact.class.cpp
+				Contact.class.cpp \
+				utils.cpp
 RM			= @rm -f
 NAME 		= phonebook
 CC			= g++ -std=c++98

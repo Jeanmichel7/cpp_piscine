@@ -13,6 +13,8 @@
 #include <iostream>
 #include "PhoneBook.class.hpp"
 #include "Contact.class.hpp"
+#include "main.hpp"
+
 
 PhoneBook::PhoneBook (void) {
 
@@ -27,25 +29,29 @@ PhoneBook::~PhoneBook (void) {
 }
 
 void	PhoneBook::add_contact() {
-
-	std::string	str;
-
-	std::cout << "menu add contact : ";
-
-	std::cout << "first name : ";
-	std::cin >> str;
-	this->tab_contact[0].add_contact_first_name(str);
+	std::cout << "menu add contact : \n" << std::endl;
+	this->tab_contact[0].set_contact();
 }
 
 
 
+//  index, first name, last name and nickname.
+void	PhoneBook::search_contact() {
 
-
-
-
-
-void	PhoneBook::search_contact(void) {
 	std::cout << "search contact" << std::endl;
+	this->display_phonebook();
+
+	// recup input index
+
+	// affiche conact[i]
+
+}
+
+void	PhoneBook::display_phonebook()
+{
+	for(int i = 0; i < 8; i++) {
+		this->tab_contact[i].get_contact();
+	}
 }
 
 void	PhoneBook::exit(void) {
