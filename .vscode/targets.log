@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul  2 02:13:20 2022
+# Make data base, printed on Sat Jul  2 21:50:17 2022
 
 # Variables
 
@@ -61,7 +61,7 @@ NVM_BIN = /home/jrasser/.nvm/versions/node/v16.14.2/bin
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-0229ae0b-8879-48a9-98cf-b142321f6c18.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-cd8f7382-1fa6-45b1-8504-5c1d9d87c049.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -77,11 +77,11 @@ PWD = /home/jrasser/42/cpp_piscine
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/401_interop
+WSL_INTEROP = /run/WSL/403_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
-WT_SESSION = f864b051-bf32-42ab-8e28-1acb458017b8
+WT_SESSION = ffa9b9e4-b041-4ef5-8096-004a9c2d0694
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -168,10 +168,8 @@ TERM = xterm-256color
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu
-# environment
-MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=79/1024=8%, Rehash=0, Collisions=6/101=6%
+# Load=78/1024=8%, Rehash=0, Collisions=6/100=6%
 
 # Pattern-specific Variable Values
 
@@ -179,7 +177,7 @@ MOTD_SHOWN = update-motd
 
 # Directories
 
-# . (device 2096, inode 12196): 13 files, no impossibilities.
+# . (device 2080, inode 12196): 13 files, no impossibilities.
 
 # 13 files, no impossibilities in 1 directories.
 
@@ -237,6 +235,6 @@ GNUmakefile:
 # strcache performance: lookups = 24 / hit rate = 12%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=1/24=4%
-# Finished Make data base on Sat Jul  2 02:13:20 2022
+# Finished Make data base on Sat Jul  2 21:50:17 2022
 
  

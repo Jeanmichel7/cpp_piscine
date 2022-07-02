@@ -6,14 +6,15 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 23:12:29 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/02 02:25:03 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/03 00:50:03 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
 void	ft_bad_input(std::string str) {
-	std::cout << "commande " << str << " non reconnu" << std::endl;
+	std::cout << "\001\e[01;31m\002Commande \"" << str << "\" non reconnu\001\e[00;37m\002" << std::endl;
+	ft_clear_buffer();
 }
 
 void	ft_clear_buffer() {

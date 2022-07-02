@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:46:30 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/02 04:33:04 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/03 00:50:35 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,42 +26,32 @@ Contact::~Contact (void) {
 void	Contact::set_contact() {
 	std::string	str;
 
-	std::cout << "first_name : "; 
+	std::cout << "First_name     : ";
 	std::cin >> str;
 	this->first_name = str;
-	//std::cout << this->first_name << std::endl;
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	ft_clear_buffer();
 
-	std::cout << "last_name : "; 
+	std::cout << "Last_name      : ";
 	std::cin >> str;
 	this->last_name = str;
-	//std::cout << this->last_name << std::endl;
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	ft_clear_buffer();
 
-	std::cout << "nickname : "; 
+	std::cout << "Nickname       : ";
 	std::cin >> str;
 	this->nickname = str;
-	//std::cout << this->nickname << std::endl;
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	ft_clear_buffer();
 
-	std::cout << "phone_number : "; 
+	std::cout << "Phone_number   : ";
 	std::cin >> str;
 	this->phone_number = str;
-	//std::cout << this->phone_number << std::endl;
-	std::cin.clear();
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	ft_clear_buffer();
 
-	std::cout << "darkest_secret : "; 
-	std::cin >> str;
-	do {
-		this->darkest_secret = str;
-	} while (str != "");
-	//std::cout << this->darkest_secret << std::endl;
+	std::cout << "Darkest_secret : ";
+	std::getline (std::cin, str);
+	this->darkest_secret = str;
+	//ft_clear_buffer();
 
-	std::cout << std::endl;
+
 }
 
 std::string	Contact::get_first_name() {
