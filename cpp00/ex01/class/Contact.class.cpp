@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:46:30 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/02 02:36:06 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/02 04:08:47 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,22 @@ void	Contact::set_contact() {
 	std::cout << std::endl;
 }
 
-void	Contact::get_contacts() {
-	std::cout << "first name : "<< this->first_name 	<< std::endl
-			<< "last_name"		<< this->last_name		<< std::endl
-			<< "nickname"		<< this->nickname		<< std::endl
-			<< "phone number"	<< this->phone_number	<< std::endl
-			<< "darkest secret" << this->darkest_secret << std::endl;
+std::string	Contact::get_first_name() {
+	return (this->first_name);
+}
+
+std::string	Contact::get_last_name() {
+	return (this->last_name);
+}
+
+std::string	Contact::get_nickname() {
+	return (this->nickname);
+}
+
+std::string	Contact::get_phone_number() {
+	return (this->phone_number);
+}
+
+std::string	Contact::get_darkest_secret() {
+	return (this->darkest_secret);
 }

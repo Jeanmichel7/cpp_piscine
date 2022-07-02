@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:45:40 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/02 02:36:12 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/02 04:06:44 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ public:
 	Contact (void);
 	~Contact (void);
 	void	set_contact();
-	void	get_contacts();
+	std::string	get_first_name();
+	std::string	get_last_name();
+	std::string	get_nickname();
+	std::string	get_phone_number();
+	std::string	get_darkest_secret();
 
 private:
 	std::string	first_name;
