@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:46:30 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/02 04:08:47 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/02 04:33:04 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,9 @@ void	Contact::set_contact() {
 
 	std::cout << "darkest_secret : "; 
 	std::cin >> str;
-	this->darkest_secret = str;
+	do {
+		this->darkest_secret = str;
+	} while (str != "");
 	//std::cout << this->darkest_secret << std::endl;
 
 	std::cout << std::endl;
