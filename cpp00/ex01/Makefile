@@ -6,15 +6,16 @@
 #    By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/29 23:11:11 by jrasser           #+#    #+#              #
-#    Updated: 2022/06/30 12:49:24 by jrasser          ###   ########.fr        #
+#    Updated: 2022/07/02 02:13:10 by jrasser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		= 	main.cpp \
-				PhoneBook.class.cpp \
-				Contact.class.cpp \
-				utils.cpp
-RM			= @rm -f
+				utils.cpp \
+				class/PhoneBook.class.cpp \
+				class/Contact.class.cpp \
+				
+RM			= @rm -rf
 NAME 		= phonebook
 CC			= g++ -std=c++98
 CFLAGS		= -Wall -Wextra -g -fsanitize=address

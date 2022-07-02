@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:45:40 by jrasser           #+#    #+#             */
-/*   Updated: 2022/06/30 14:32:57 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/02 02:36:12 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	Contact (void);
 	~Contact (void);
 	void	set_contact();
-	void	get_contact();
+	void	get_contacts();
 
 private:
 	std::string	first_name;
