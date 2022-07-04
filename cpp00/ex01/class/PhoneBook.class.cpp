@@ -25,10 +25,20 @@ void	PhoneBook::add_contact() {
 
 	std::cout << "\001\e[04;37m\002Menu add contact\001\e[00;37m\002" << std::endl << std::endl;
 	ft_clear_buffer();
-	for(i = 0; tab_contact[i].get_first_name() != "" && i < 6; i++);
-	this->tab_contact[i].set_contact();
-	std::cout << "\001\e[02;34m\002Contact ajouté\001\e[00;37m\002 " << std::endl;
 
+
+	for(i = 7; i >= 0; i--) {
+		if (tab_contact[i].get_first_name() != "" && i != 7)
+		{
+			this->tab_contact[i + 1].set_first_name(this->tab_contact[i].get_first_name());
+			this->tab_contact[i + 1].set_last_name(this->tab_contact[i].get_last_name());
+			this->tab_contact[i + 1].set_nickname(this->tab_contact[i].get_nickname());
+			this->tab_contact[i + 1].set_phone_number(this->tab_contact[i].get_phone_number());
+			this->tab_contact[i + 1].set_darkest_secret(this->tab_contact[i].get_darkest_secret());
+		}
+	}
+	this->tab_contact[0].set_contact();
+	std::cout << "\001\e[02;34m\002Contact ajouté\001\e[00;37m\002 " << std::endl;
 }
 
 void	PhoneBook::search_contact() {
@@ -53,12 +63,12 @@ void	PhoneBook::search_contact() {
 
 void	PhoneBook::display_contact(int i) {
 	std::cout
-		<< std::endl << std::endl
-		<< "First name :     " << tab_contact[i].get_first_name()		<< std::endl
-		<< "Last_name :      " << tab_contact[i].get_last_name()		<< std::endl
-		<< "Nickname :       " << tab_contact[i].get_nickname()			<< std::endl
-		<< "Phone number :   " << tab_contact[i].get_phone_number()		<< std::endl
-		<< "Darkest secret : " << tab_contact[i].get_darkest_secret()	<< std::endl << std::endl;
+	<< std::endl << std::endl
+	<< "First name :     " << tab_contact[i].get_first_name()		<< std::endl
+	<< "Last_name :      " << tab_contact[i].get_last_name()		<< std::endl
+	<< "Nickname :       " << tab_contact[i].get_nickname()			<< std::endl
+	<< "Phone number :   " << tab_contact[i].get_phone_number()		<< std::endl
+	<< "Darkest secret : " << tab_contact[i].get_darkest_secret()	<< std::endl << std::endl;
 }
 
 void	PhoneBook::display_phonebook() {
@@ -67,7 +77,7 @@ void	PhoneBook::display_phonebook() {
 	std::cout << std::endl;
 	if (tab_contact[0].get_first_name() != "")
 	{
-		std::cout << "\001\e[01;34m\002   Index  |First_name| Last_name| Kickname \001\e[00;37m\002" << std::endl;
+		std::cout << "\001\e[01;34m\002   Index  |First_name| Last_name| Nickname \001\e[00;37m\002" << std::endl;
 		for(int i = 0; i < 8; i++) {
 			if (tab_contact[i].get_first_name() != "")
 			{

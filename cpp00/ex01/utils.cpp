@@ -13,7 +13,7 @@
 #include "main.hpp"
 
 void	ft_bad_input(std::string str) {
-	std::cout << "\001\e[01;31m\002Commande \"" << str << "\" non reconnu\001\e[00;37m\002" << std::endl;
+	std::cout << "\001\e[01;31m\002Commande \"" << str << "\" non reconnue\001\e[00;37m\002" << std::endl;
 	ft_clear_buffer();
 }
 
