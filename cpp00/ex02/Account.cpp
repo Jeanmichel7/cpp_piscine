@@ -14,10 +14,10 @@
 #include <iostream>
 #include <ctime>
 
-int Account::_nbAccounts{0};
-int	Account::_totalAmount{0};
-int	Account::_totalNbDeposits{0};
-int	Account::_totalNbWithdrawals{0};
+int Account::_nbAccounts = 0;
+int	Account::_totalAmount = 0;
+int	Account::_totalNbDeposits = 0;
+int	Account::_totalNbWithdrawals = 0;
 
 Account::Account (int inital_deposit) {
 	static int i = 0;

@@ -55,7 +55,7 @@ void	PhoneBook::search_contact() {
 		index = (int)(index_search[0] - '0');
 		if (index_search.length() == 1 && index < 8 && tab_contact[index].get_first_name() != "")
 			this->display_contact(index);
-		else if (index_search != "STOP")
+		else
 			std::cout << "Essaye encore..." << std::endl << std::endl;
 	}
 	ft_clear_buffer();

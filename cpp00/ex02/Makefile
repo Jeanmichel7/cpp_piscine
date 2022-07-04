@@ -15,7 +15,7 @@ SRCS		= tests.cpp Account.cpp
 RM			= @rm -rf
 NAME 		= prog
 CC			= g++ -std=c++98
-CFLAGS		= -Wall -Wextra -g -fsanitize=address
+CFLAGS		= -Wall -Wextra -Werror -g -fsanitize=address
 
 ${NAME}	:	${SRCS}
 			@${CC} -o ${NAME} ${SRCS} ${CFLAGS}
