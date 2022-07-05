@@ -1,12 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/04 18:43:38 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/04 18:43:39 by jrasser          ###   ########.fr       */
+/*   Created: 2022/07/04 18:43:40 by jrasser           #+#    #+#             */
+/*   Updated: 2022/07/05 13:27:43 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+void	Zombie::randomChump( std::string name ) {
+	this->_name = name;
+	this->announce();
+}

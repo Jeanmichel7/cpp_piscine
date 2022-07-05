@@ -3,32 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 18:43:36 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/04 23:33:18 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/05 15:19:02 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include <new>
 
-Zombie::Zombie( void ) {
+Zombie::Zombie( std::string name ) {
+	this->_name = name;
 	return;
 }
+
 Zombie::~Zombie( void ) {
+	std::cout << "destrcutor : " << this->_name << std::endl;
 	return;
 }
-//Foo: BraiiiiiiinnnzzzZ...
+
 void	Zombie::announce( void ) {
-	std::cout << std::endl; 
-}
-
-Zombie*	newZombie( std::string name ) {
-
-	Zombie *new_zombie = new Zombie;
-
-	new_zombie->_name = name;
-
-	return (new_zombie);
+	std::cout << this->_name << ":: BraiiiiiiinnnzzzZ..." << std::endl;
 }

@@ -3,20 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+         #
+#    By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/07/04 18:43:19 by jrasser           #+#    #+#              #
-#    Updated: 2022/07/04 23:14:56 by jrasser          ###   ########.fr        #
+#    Created: 2022/07/05 13:29:33 by jrasser           #+#    #+#              #
+#    Updated: 2022/07/05 13:50:43 by jrasser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		= 	main.cpp \
 				Zombie.cpp \
-				newZombie.cpp \
-				randomChump.cpp
+				zombieHorde.cpp \
 				
 RM			= @rm -rf
-NAME 		= phonebook
+NAME 		= prog
 CC			= g++ -std=c++98
 CFLAGS		= -Wall -Wextra -g -fsanitize=address
 
