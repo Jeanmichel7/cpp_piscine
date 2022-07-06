@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 22:12:42 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/07 00:05:17 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/07 01:00:37 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,13 @@ void Harl::complain( std::string level )
 
 	//comparer les 2 tableaux
 	int	i;
-	std::cout << "input : " << level << std::endl;
 	for(i = 0; i < 4; i++) {
 		if (level == tab_levels[i]) {
-			(this->*tab_p_fct[i])();
-			break ;
+			while (i < 4) {
+				std::cout << "[" << tab_levels[i] << "]" << std::endl;
+				(this->*tab_p_fct[i])();
+				i++;
+			}
 		}
 	}
 	if (i == 4)
