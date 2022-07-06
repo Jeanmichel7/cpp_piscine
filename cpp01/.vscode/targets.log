@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul  6 16:06:15 2022
+# Make data base, printed on Wed Jul  6 15:21:03 2022
 
 # Variables
 
@@ -31,7 +31,7 @@ NVM_INC = /home/jrasser/.nvm/versions/node/v16.14.2/include/node
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /home/jrasser/42/cpp_piscine
+CURDIR := /home/jrasser/42/cpp_piscine/cpp01
 # makefile
 SHELL = /bin/sh
 # environment
@@ -61,7 +61,7 @@ NVM_BIN = /home/jrasser/.nvm/versions/node/v16.14.2/bin
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-42c4accb-35f2-44d4-adcd-5d18746b0cf2.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-cc1c98c0-25da-4435-b68a-0cb46f3f5b86.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -73,7 +73,7 @@ DISPLAY = :0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/jrasser/42/cpp_piscine
+PWD = /home/jrasser/42/cpp_piscine/cpp01
 # default
 .LOADED := 
 # environment
@@ -177,9 +177,9 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2080, inode 12196): 13 files, no impossibilities.
+# . (device 2080, inode 231637): 11 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -229,12 +229,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 21 / storage = 157 B / avg = 7 B
-# current buf: size = 8162 B / used = 157 B / count = 21 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 19 / storage = 143 B / avg = 7 B
+# current buf: size = 8162 B / used = 143 B / count = 19 / avg = 7 B
 
-# strcache performance: lookups = 24 / hit rate = 12%
+# strcache performance: lookups = 22 / hit rate = 13%
 # hash-table stats:
-# Load=21/8192=0%, Rehash=0, Collisions=1/24=4%
-# Finished Make data base on Wed Jul  6 16:06:15 2022
+# Load=19/8192=0%, Rehash=0, Collisions=1/22=5%
+# Finished Make data base on Wed Jul  6 15:21:03 2022
 
  
