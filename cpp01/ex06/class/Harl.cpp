@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 22:12:42 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/07 01:00:37 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/07 03:53:58 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,6 @@ Harl::Harl()
 Harl::~Harl()
 {
 	return;
-}
-
-void	Harl::debug() {
-	std::cout
-	<< "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup \
-burger. I really do!"
-	<< std::endl;
 }
 
 void	Harl::info() {
@@ -64,11 +57,14 @@ void Harl::complain( std::string level )
 	typedef	void (Harl::*p_fct)(void);
 	p_fct	tab_p_fct[4];
 
-	tab_p_fct[0] = &Harl::debug;
+    void    (*pdebug)(void);
+    typedef     void (Harl::*debug());
+
+    pdebug = &Harl::debug->debug1;
+	tab_p_fct[0] = &Debug::debug1;
 	tab_p_fct[1] = &Harl::info;
 	tab_p_fct[2] = &Harl::warning;
 	tab_p_fct[3] = &Harl::error;
-
 
 	//comparer les 2 tableaux
 	int	i;

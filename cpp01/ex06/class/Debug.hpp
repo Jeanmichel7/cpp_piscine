@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Debug.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 22:12:39 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/07 01:00:12 by jrasser          ###   ########.fr       */
+/*   Created: 2022/07/07 03:30:39 by jrasser           #+#    #+#             */
+/*   Updated: 2022/07/07 03:47:15 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#ifndef DEBUG_HPP
+# define DEBUG_HPP
 
-# include <iostream>
+#include <iostream>
 
-
-class Harl
+class Debug
 {
 
 private:
-	void debug( void );
-	void info( void );
-	void warning( void );
-	void error( void );
+	const std::string   level = "DEBUG";
 
-	
 
 public:
-	Harl();
-	~Harl();
-	void complain( std::string level );
+	Debug(/* args */);
+	~Debug();
+	void debug1( void ) const;
+	void debug2( void ) const;
+
 };
+
 
 #endif
