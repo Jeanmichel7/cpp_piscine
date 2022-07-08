@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 22:12:42 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/07 22:33:38 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/08 20:06:57 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,28 @@ Harl::~Harl()
 	return;
 }
 
-void	Harl::info() {
+void	Harl::debug() const {
+	std::cout
+	<< "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup \
+burger. I really do!"
+	<< std::endl;
+}
+
+void	Harl::info() const{
 	std::cout
 	<< "I cannot believe adding extra bacon costs more money. You didn’t put \
 enough bacon in my burger! If you did, I wouldn’t be asking for more!"
 	<< std::endl;
 }
 
-void	Harl::warning() {
+void	Harl::warning() const{
 	std::cout
 	<< "I think I deserve to have some extra bacon for free. I’ve been coming for \
 years whereas you started working here since last month."
 	<< std::endl;
 }
 
-void	Harl::error() {
+void	Harl::error() const{
 	std::cout
 	<< "This is unacceptable! I want to speak to the manager now."
 	<< std::endl;
@@ -52,33 +59,50 @@ void Harl::complain( std::string level )
 	tab_levels[2] = "WARNING";
 	tab_levels[3] = "ERROR";
 
+	enum Level {
+		DEBUG,
+		INFO,
+		WARNING,
+		ERROR
+	};
+
+	int		i;
+	for(i = 0; i < 4; i++) {
+		if (level == tab_levels[i]) {
+			break;
+		}
+	}
 
 	//tableau de fonctions avec les 4 fcts
-	typedef	void (Harl::*p_fct)(void);
+	typedef	void (Harl::*p_fct)(void) const;
 	p_fct	tab_p_fct[4];
-
-    void    (*pdebug)(void);
-    typedef     void (Harl::*debug());
-
-    pdebug = &Harl::debug->debug1;
-	tab_p_fct[0] = &Debug::debug1;
+	
+	tab_p_fct[0] = &Harl::debug;
 	tab_p_fct[1] = &Harl::info;
 	tab_p_fct[2] = &Harl::warning;
 	tab_p_fct[3] = &Harl::error;
 
-	//comparer les 2 tableaux
-	int	i;
-	for(i = 0; i < 4; i++) {
-		if (level == tab_levels[i]) {
-			while (i < 4) {
-				std::cout << "[" << tab_levels[i] << "]" << std::endl;
-				(this->*tab_p_fct[i])();
-				i++;
-			}
-		}
+	switch (i)
+	{
+	case (DEBUG) :
+		std::cout << "[" << tab_levels[i] << "]" << std::endl;
+		(this->*tab_p_fct[i])();
+		i++;
+	case (INFO) :
+		std::cout << "[" << tab_levels[i] << "]" << std::endl;
+		(this->*tab_p_fct[i])();
+		i++;
+	case (WARNING):
+		std::cout << "[" << tab_levels[i] << "]" << std::endl;
+		(this->*tab_p_fct[i])();
+		i++;
+	case (ERROR):
+		std::cout << "[" << tab_levels[i] << "]" << std::endl;
+		(this->*tab_p_fct[i])();
+	    break;
+	default: std::cout << "Pas de correspondance" << std::endl;
+	    break;
 	}
-	if (i == 4)
-		std::cout << "Pas de correspondance" << std::endl;
 }
 
 /*

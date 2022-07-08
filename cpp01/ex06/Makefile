@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+         #
+#    By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/06 22:12:23 by jrasser           #+#    #+#              #
-#    Updated: 2022/07/07 00:04:13 by jrasser          ###   ########.fr        #
+#    Updated: 2022/07/08 20:08:18 by jrasser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		= 	main.cpp \
-				Harl.cpp
+				class/Harl.cpp
 				
 OBJS		= ${SRCS:.c=.o}
 RM			= @rm -rf

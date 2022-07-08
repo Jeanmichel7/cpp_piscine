@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 22:12:39 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/07 22:33:52 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/08 20:08:28 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,21 @@
 # define HARL_HPP
 
 # include <iostream>
-#include "Debug.hpp"
-
 
 class Harl
 {
 
 private:
-	void info( void );
-	void warning( void );
-	void error( void );
+	void debug( void ) const;
+	void info( void ) const;
+	void warning( void ) const;
+	void error( void ) const;
 
 public:
 	Harl();
 	~Harl();
 	void complain( std::string level );
-    Debug debug;
+	
 };
 
 #endif
