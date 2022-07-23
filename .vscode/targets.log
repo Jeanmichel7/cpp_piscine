@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul  6 17:25:43 2022
+# Make data base, printed on Sat Jul 23 14:33:52 2022
 
 # Variables
 
@@ -18,8 +20,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
 # default
 .SHELLFLAGS := -c
-# environment
-VSCODE_LOG_NATIVE = false
 # environment
 NVM_INC = /home/jrasser/.nvm/versions/node/v16.14.2/include/node
 # automatic
@@ -33,7 +33,7 @@ CURDIR := /home/jrasser/42/cpp_piscine
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"575d78304484aa5fa0cbb32d34fd883d.fr","_translationsConfigFile":"/home/jrasser/.vscode-server/data/clp/575d78304484aa5fa0cbb32d34fd883d.fr/tcf.json","_cacheRoot":"/home/jrasser/.vscode-server/data/clp/575d78304484aa5fa0cbb32d34fd883d.fr","_resolvedLanguagePackCoreLocation":"/home/jrasser/.vscode-server/data/clp/575d78304484aa5fa0cbb32d34fd883d.fr/30d9c6cd9483b2cc586687151bcbcd635f373630","_corruptedFile":"/home/jrasser/.vscode-server/data/clp/575d78304484aa5fa0cbb32d34fd883d.fr/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"8e1a08857df44efaeace20a1f4372f40.fr","_translationsConfigFile":"/home/jrasser/.vscode-server/data/clp/8e1a08857df44efaeace20a1f4372f40.fr/tcf.json","_cacheRoot":"/home/jrasser/.vscode-server/data/clp/8e1a08857df44efaeace20a1f4372f40.fr","_resolvedLanguagePackCoreLocation":"/home/jrasser/.vscode-server/data/clp/8e1a08857df44efaeace20a1f4372f40.fr/3b889b090b5ad5793f524b5d1d39fda662b96a2a","_corruptedFile":"/home/jrasser/.vscode-server/data/clp/8e1a08857df44efaeace20a1f4372f40.fr/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /mnt/c/Users/michm/AppData/Local/Programs/Microsoft VS Code/bin/code
 # makefile
@@ -43,23 +43,21 @@ GNUMAKEFLAGS :=
 # environment
 XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /mnt/c/Users/michm/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/jrasser/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/home/jrasser/.local/bin:/home/jrasser/bin:/home/jrasser/.nvm/versions/node/v16.14.2/bin:/home/jrasser/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/michm/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/michm/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/michm/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+PATH = /home/jrasser/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/home/jrasser/.local/bin:/home/jrasser/bin:/home/jrasser/.nvm/versions/node/v16.14.2/bin:/home/jrasser/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/michm/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/michm/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/michm/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
 # environment
 NAME = Code
 # environment
 NVM_BIN = /home/jrasser/.nvm/versions/node/v16.14.2/bin
 # environment
-VSCODE_LOG_STACK = false
+ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-42c4accb-35f2-44d4-adcd-5d18746b0cf2.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-fff56c6e-d945-43be-9620-a467a6d58860.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -69,17 +67,15 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # environment
 DISPLAY = :0
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
 PWD = /home/jrasser/42/cpp_piscine
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/403_interop
+WSL_INTEROP = /run/WSL/479_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
-WT_SESSION = c62e31dd-7874-4f6b-aea2-ff8a2119f1d6
+WT_SESSION = ceadc5a5-205e-4ce5-8024-aa8133e10522
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -89,7 +85,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 LOGNAME = jrasser
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 NVM_CD_FLAGS = 
 # environment
@@ -163,11 +159,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_EXTHOST_WILL_SEND_SOCKET = true
-# environment
 WSL_DISTRO_NAME = Ubuntu
 # variable set hash-table stats:
-# Load=78/1024=8%, Rehash=0, Collisions=6/100=6%
+# Load=74/1024=7%, Rehash=0, Collisions=6/96=6%
 
 # Pattern-specific Variable Values
 
@@ -233,9 +227,6 @@ GNUmakefile:
 # strcache performance: lookups = 24 / hit rate = 12%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=1/24=4%
- 
-make: *** No rule to make target 'all'.  Stop.
-
-# Finished Make data base on Wed Jul  6 17:25:43 2022
+# Finished Make data base on Sat Jul 23 14:33:52 2022
 
  

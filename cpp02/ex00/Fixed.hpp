@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/04 18:43:33 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/23 14:18:15 by jrasser          ###   ########.fr       */
+/*   Created: 2022/07/08 22:57:37 by jrasser           #+#    #+#             */
+/*   Updated: 2022/07/23 14:50:35 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
 
-class Zombie {
-
-public:
-	Zombie( std::string name );
-	~Zombie( void );
-	void	announce( void );
-	Zombie*	newZombie( std::string name );
-	void	randomChump( std::string name );
-
+class Fixed
+{
 private:
-	std::string _name;
+	int					_entier;
+	static const int	_frac_nb_bits = 8;
+public:
+	Fixed();
+	Fixed(const Fixed &copie);
+	~Fixed();
 	
+	Fixed& operator=(Fixed &operateur);
+	
+	void	setRawBits( int const raw );
+	int		getRawBits( void ) const;
 };
 
 #endif
