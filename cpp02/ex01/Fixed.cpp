@@ -6,14 +6,11 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:57:57 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/24 22:34:29 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/24 22:36:40 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <cstdio>
-#include <limits.h>
-#define FIX_MAX SHRT_MAX
 
 /*
 void printBits(size_t const size, void const *const ptr)
@@ -51,10 +48,7 @@ int bit_is_one(size_t const size, void const *const ptr, int search_index)
 		}
 	}
 	return (0);
-	puts("");
 }
-
-
 
 /* CONSTRUCTOR */
 Fixed::Fixed() : _value(0)
