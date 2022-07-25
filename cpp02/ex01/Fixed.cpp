@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:57:57 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/25 01:30:03 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/25 15:35:37 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ int bit_is_one(size_t const size, void const *const ptr, int search_index)
 	{
 		for (j = 7; j >= 0; j--)
 		{
-			printf("avant : i : %d, j : %d\n b[%d] : %u, byte : %u\n\n", i, j, i, b[i], byte);
+			//printf("avant : i : %d, j : %d\n b[%d] : %u, byte : %u\n\n", i, j, i, b[i], byte);
 
 			byte = (b[i] >> j) & 1;
 			if (i == 0)
-				printf("test : i : %d, j : %d\n b[%d] : %u, byte : %u\n\n", i, j, i, b[i], byte);
+				//printf("test : i : %d, j : %d\n b[%d] : %u, byte : %u\n\n", i, j, i, b[i], byte);
 			if (i == 0 && j == search_index && byte == 1)
 				return (1);
 		}
@@ -101,23 +101,26 @@ Fixed::~Fixed()
 Fixed::Fixed(const Fixed &copie) : _value(copie._value)
 {
 	std::cout << "Copy constructor called" << std::endl;
+
+
 	return;
 }
 
-/*
-Fixed &Fixed::operator=(Fixed &ref_class(const float nb))
+
+Fixed &Fixed::operator=(Fixed const &ref_class)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	return Fixed( this->_value = this->getRawBits() );
+	this->_value = ref_class.getRawBits();
+	return (*this);
 }
-*/
 
+/*
 Fixed &Fixed::operator=(const float cst_float)
 {
 	this->_value = cst_float;
 	return (*this);
 }
-
+*/
 
 
 /* FCT MEMBRE */

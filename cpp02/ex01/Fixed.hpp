@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:57:37 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/25 01:22:02 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/25 15:35:40 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ public:
 	Fixed(const Fixed &copie);
 	~Fixed();
 	
-	//Fixed &operator=(Fixed &ref_class);
-	Fixed &operator=(const float cst_float);
+	Fixed &operator=(Fixed const &ref_class);
+	//Fixed &operator=(const float cst_float);
 	
 	void	setRawBits( int const raw );
 	int		getRawBits( void ) const;
