@@ -6,11 +6,12 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:57:57 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/24 22:36:40 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/25 01:30:03 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <stdio.h>
 
 /*
 void printBits(size_t const size, void const *const ptr)
@@ -41,8 +42,11 @@ int bit_is_one(size_t const size, void const *const ptr, int search_index)
 	{
 		for (j = 7; j >= 0; j--)
 		{
+			printf("avant : i : %d, j : %d\n b[%d] : %u, byte : %u\n\n", i, j, i, b[i], byte);
+
 			byte = (b[i] >> j) & 1;
-			//printf("test : i : %d, j : %d, char : %u\n", i, j, byte);
+			if (i == 0)
+				printf("test : i : %d, j : %d\n b[%d] : %u, byte : %u\n\n", i, j, i, b[i], byte);
 			if (i == 0 && j == search_index && byte == 1)
 				return (1);
 		}
@@ -81,14 +85,10 @@ Fixed::Fixed(const float cst_float)
 	//std::cout << "int :	" << *cast << std::endl;
 	//printBits(sizeof(*cast), cast);
 
-	int b;
-	b = cst_float * 256;
-	b = roundf(b);
-
 	//std::cout << "new int test:	" << b << std::endl;
 	//printBits(sizeof(b), &b);
 
-	this->setRawBits(b);
+	this->setRawBits(roundf(cst_float * 256));
 	return;
 }
 
@@ -104,12 +104,21 @@ Fixed::Fixed(const Fixed &copie) : _value(copie._value)
 	return;
 }
 
-Fixed &Fixed::operator=(Fixed &ref_class)
+/*
+Fixed &Fixed::operator=(Fixed &ref_class(const float nb))
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	_value = ref_class._value;
+	return Fixed( this->_value = this->getRawBits() );
+}
+*/
+
+Fixed &Fixed::operator=(const float cst_float)
+{
+	this->_value = cst_float;
 	return (*this);
 }
+
+
 
 /* FCT MEMBRE */
 int Fixed::getRawBits(void) const
@@ -120,6 +129,16 @@ int Fixed::getRawBits(void) const
 void Fixed::setRawBits(int const raw)
 {
 	_value = raw;
+}
+
+int Fixed::toInt(void) const
+{
+	int		temp;
+
+	temp = getRawBits();
+	for(int i = 0; i < 8; i++)
+		temp >>= 1;
+	return (temp);
 }
 
 float Fixed::toFloat(void) const
@@ -144,16 +163,6 @@ float Fixed::toFloat(void) const
 			virgul_value += fraction_value;
 	}
 	return virgul_value;
-}
-
-int Fixed::toInt(void) const
-{
-	int		temp;
-
-	temp = getRawBits();
-	for(int i = 0; i < 8; i++)
-		temp >>= 1;
-	return (temp);
 }
 
 std::ostream &operator<<(std::ostream &cout, const Fixed &instance)
