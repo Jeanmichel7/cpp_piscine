@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:57:37 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/25 15:35:40 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/28 03:41:06 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,14 @@ class Fixed
 private:
 	int					_value;
 	static const int	_nb_fractionnaire = 8;
+	
 public:
 	Fixed();
+	~Fixed();
 	Fixed(const int cst_int);
 	Fixed(const float cst_float);
 	Fixed(const Fixed &copie);
-	~Fixed();
-	
 	Fixed &operator=(Fixed const &ref_class);
-	//Fixed &operator=(const float cst_float);
 	
 	void	setRawBits( int const raw );
 	int		getRawBits( void ) const;
