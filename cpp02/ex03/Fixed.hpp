@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:57:37 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/28 03:32:50 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/28 02:32:25 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,47 @@
 #define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {
 private:
-	int					_entier;
-	static const int	_frac_nb_bits = 8;
+	int					_value;
+	static const int	_nb_fractionnaire = 8;
 public:
 	Fixed();
-	~Fixed();
+	Fixed(const int cst_int);
+	Fixed(const float cst_float);
 	Fixed(const Fixed &copie);
-	Fixed& operator=(Fixed &operateur);
+	~Fixed();
+
+	Fixed	&operator =(const float cst_float);
+	bool	operator >(Fixed &n) const;
+	bool	operator <(Fixed &n) const;
+	bool	operator >=(Fixed &n) const;
+	bool	operator <=(Fixed &n) const;
+	bool	operator ==(Fixed &n) const;
+	bool	operator !=(Fixed &n) const;
+
+	Fixed	operator +(Fixed n) const;
+	Fixed	operator -(Fixed n) const;
+	Fixed	operator *(Fixed n) const;
+	Fixed	operator /(Fixed n) const;
+
+	Fixed	&operator ++();
+	Fixed	operator ++(int);
 
 	void	setRawBits( int const raw );
 	int		getRawBits( void ) const;
+	float	toFloat( void ) const;
+	int		toInt( void ) const;
+
+	static Fixed	min(Fixed &ref1, Fixed &ref2);
+	static Fixed	min(Fixed const &ref1, Fixed const &ref2);
+	static Fixed	max(Fixed &ref1, Fixed &ref2);
+	static Fixed	max(Fixed const &ref1, Fixed const &ref2);
 };
+
+std::ostream &operator<<(std::ostream &blabla, const Fixed &instance);
 
 #endif

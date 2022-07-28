@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul 28 01:39:56 2022
+# Make data base, printed on Thu Jul 28 03:26:56 2022
 
 # Variables
 
@@ -29,19 +27,25 @@ NVM_INC = /home/jrasser/.nvm/versions/node/v16.14.2/include/node
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /home/jrasser/42/cpp_piscine
+CURDIR := /home/jrasser/42/cpp_piscine/cpp02/ex00
 # makefile
 SHELL = /bin/sh
+# makefile (from 'Makefile', line 18)
+RM = @rm -rf
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
 _ = /mnt/c/Users/michm/AppData/Local/Programs/Microsoft VS Code/bin/code
-# makefile
-MAKEFILE_LIST := 
+# makefile (from 'Makefile', line 20)
+CFLAGS = -Wall -Wextra -g3 -fsanitize=address
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
 XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
+# makefile (from 'Makefile', line 17)
+OBJS = ${SRCS:.c=.o}
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -57,7 +61,7 @@ NVM_BIN = /home/jrasser/.nvm/versions/node/v16.14.2/bin
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-ee5108da-f279-416d-9bc2-2f0dfec79e12.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-8ee9b687-1319-4991-8bd7-4f56e9f3b1a4.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -67,7 +71,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # environment
 DISPLAY = :0
 # environment
-PWD = /home/jrasser/42/cpp_piscine
+PWD = /home/jrasser/42/cpp_piscine/cpp02/ex00
 # default
 .LOADED := 
 # environment
@@ -85,7 +89,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 LOGNAME = jrasser
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 NVM_CD_FLAGS = 
 # environment
@@ -98,14 +102,18 @@ MAKELEVEL := 0
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
+# makefile (from 'Makefile', line 13)
+SRCS = main.cpp Fixed.cpp
 # environment
 SHLVL = 1
+# makefile (from 'Makefile', line 19)
+CC = g++ -std=c++98
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = jrasser
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := Code
 # environment
 LIBVIRT_DEFAULT_URI = qemu:///system
 # automatic
@@ -161,7 +169,7 @@ TERM = xterm-256color
 # environment
 WSL_DISTRO_NAME = Ubuntu
 # variable set hash-table stats:
-# Load=74/1024=7%, Rehash=0, Collisions=6/96=6%
+# Load=79/1024=8%, Rehash=0, Collisions=11/115=10%
 
 # Pattern-specific Variable Values
 
@@ -169,9 +177,9 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2080, inode 12196): 14 files, no impossibilities.
+# . (device 2080, inode 73944): 9 files, no impossibilities.
 
-# 14 files, no impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -179,26 +187,55 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Files
 
-# Not a target:
-all:
+all: Code
+#  Phony target (prerequisite of .PHONY).
 #  Command line target.
-#  Implicit rule search has been done.
+#  Implicit rule search has not been done.
 #  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
+
+.PHONY: all clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Fixed.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-27 22:45:50.10601
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2022-07-23 14:32:49.740019
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
 
 # Not a target:
-makefile:
+main.cpp:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2022-07-27 22:45:50.10601
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 28):
+			${RM} ${NAME}
 
 # Not a target:
 .DEFAULT:
@@ -206,27 +243,60 @@ makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-GNUmakefile:
-#  Implicit rule search has been done.
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+Code: main.cpp Fixed.cpp
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
-#  Failed to be updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := Code
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := main.cpp Fixed.cpp
+# automatic
+# | := 
+# automatic
+# < := main.cpp
+# automatic
+# ^ := main.cpp Fixed.cpp
+# automatic
+ 
+# ? := main.cpp Fixed.cpp
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/15=13%
+#  recipe to execute (from 'Makefile', line 23):
+			@${CC} ${OBJS} ${CFLAGS}
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# Load=11/1024=1%, Rehash=0, Collisions=0/33=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 22 / storage = 162 B / avg = 7 B
-# current buf: size = 8162 B / used = 162 B / count = 22 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 19 / storage = 151 B / avg = 7 B
+# current buf: size = 8162 B / used = 151 B / count = 19 / avg = 7 B
 
-# strcache performance: lookups = 25 / hit rate = 12%
+# strcache performance: lookups = 41 / hit rate = 53%
 # hash-table stats:
-# Load=22/8192=0%, Rehash=0, Collisions=1/25=4%
-# Finished Make data base on Thu Jul 28 01:39:56 2022
+# Load=19/8192=0%, Rehash=0, Collisions=1/41=2%
+# Finished Make data base on Thu Jul 28 03:26:56 2022
 
  
