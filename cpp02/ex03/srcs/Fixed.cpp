@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:57:57 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/28 02:32:26 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/30 03:07:35 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,9 +84,19 @@ Fixed::Fixed(const Fixed &copie) : _value(copie._value)
 
 
 /* SURCHARGE OPERTEUR */
-Fixed &Fixed::operator=(const float cst_float)
+/*
+Fixed &Fixed::operator=(const Fixed &n) const
 {
-	this->_value = cst_float;
+	Fixed ret;
+
+	ret.setRawBits(n.getRawBits());
+	return(ret);
+}
+*/
+Fixed &Fixed::operator=(const Fixed &n)
+{
+	//this->_value = n.getRawBits();
+	this->setRawBits(n.getRawBits());
 	return (*this);
 }
 bool Fixed::operator >(Fixed &n) const
@@ -185,9 +195,6 @@ Fixed	Fixed::operator ++(int)
 
 
 
-
-
-
 /* FCT OPERTEUR SURCHARGE */
 Fixed	Fixed::min(Fixed &ref1, Fixed &ref2)
 {
@@ -229,12 +236,10 @@ int Fixed::getRawBits(void) const
 {
 	return (_value);
 }
-
 void Fixed::setRawBits(int const raw)
 {
 	_value = raw;
 }
-
 int Fixed::toInt(void) const
 {
 	int		temp;
@@ -244,7 +249,6 @@ int Fixed::toInt(void) const
 		temp >>= 1;
 	return (temp);
 }
-
 float Fixed::toFloat(void) const
 {
 	int 	decimal_value;
@@ -268,7 +272,6 @@ float Fixed::toFloat(void) const
 	}
 	return virgul_value;
 }
-
 std::ostream &operator<<(std::ostream &cout, const Fixed &instance)
 {
 	cout << instance.toFloat();

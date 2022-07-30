@@ -6,12 +6,12 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:57:37 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/28 02:32:25 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/30 20:52:20 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
-#define FIXED_HPP
+# define FIXED_HPP
 
 #include <iostream>
 #include <cmath>
@@ -28,7 +28,7 @@ public:
 	Fixed(const Fixed &copie);
 	~Fixed();
 
-	Fixed	&operator =(const float cst_float);
+	Fixed	&operator =(const Fixed &n);
 	bool	operator >(Fixed &n) const;
 	bool	operator <(Fixed &n) const;
 	bool	operator >=(Fixed &n) const;
