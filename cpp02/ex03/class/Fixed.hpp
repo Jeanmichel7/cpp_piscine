@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:57:37 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/30 20:52:20 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/31 01:12:15 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Fixed
 private:
 	int					_value;
 	static const int	_nb_fractionnaire = 8;
+
 public:
 	Fixed();
 	Fixed(const int cst_int);
@@ -29,12 +30,12 @@ public:
 	~Fixed();
 
 	Fixed	&operator =(const Fixed &n);
-	bool	operator >(Fixed &n) const;
-	bool	operator <(Fixed &n) const;
-	bool	operator >=(Fixed &n) const;
-	bool	operator <=(Fixed &n) const;
-	bool	operator ==(Fixed &n) const;
-	bool	operator !=(Fixed &n) const;
+	bool	operator >(Fixed const &n) const;
+	bool	operator <(Fixed const &n) const;
+	bool	operator >=(Fixed const &n) const;
+	bool	operator <=(Fixed const &n) const;
+	bool	operator ==(Fixed const &n) const;
+	bool	operator !=(Fixed const &n) const;
 
 	Fixed	operator +(Fixed n) const;
 	Fixed	operator -(Fixed n) const;

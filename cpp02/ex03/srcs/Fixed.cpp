@@ -6,73 +6,32 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:57:57 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/30 03:07:35 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/30 23:58:13 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <stdio.h>
 
-/*
-void printBits(size_t const size, void const *const ptr)
-{
-	unsigned char *b = (unsigned char *)ptr;
-	unsigned char byte;
-	int i, j;
-
-	for (i = size - 1; i >= 0; i--)
-	{
-		for (j = 7; j >= 0; j--)
-		{
-			byte = (b[i] >> j) & 1;
-			printf("%u", byte);
-		}
-	}
-	puts("");
-}
-*/
-
-int bit_is_one(size_t const size, void const *const ptr, int search_index)
-{
-	unsigned char *b = (unsigned char *)ptr;
-	unsigned char byte;
-	int i, j;
-
-	for (i = size - 1; i >= 0; i--)
-	{
-		for (j = 7; j >= 0; j--)
-		{
-			byte = (b[i] >> j) & 1;
-			if (i == 0 && j == search_index && byte == 1)
-				return (1);
-		}
-	}
-	return (0);
-}
-
 /* CONSTRUCTOR */
 Fixed::Fixed() : _value(0)
 {
 	return;
 }
-
 Fixed::Fixed(const int cst_int)
 {
 	this->setRawBits(cst_int << _nb_fractionnaire);
 	return;
 }
-
 Fixed::Fixed(const float cst_float)
 {
 	this->setRawBits(roundf(cst_float * 256));
 	return;
 }
-
 Fixed::~Fixed()
 {
 	return;
 }
-
 Fixed::Fixed(const Fixed &copie) : _value(copie._value)
 {
 	return;
@@ -81,60 +40,49 @@ Fixed::Fixed(const Fixed &copie) : _value(copie._value)
 
 
 
-
-
 /* SURCHARGE OPERTEUR */
-/*
-Fixed &Fixed::operator=(const Fixed &n) const
-{
-	Fixed ret;
-
-	ret.setRawBits(n.getRawBits());
-	return(ret);
-}
-*/
 Fixed &Fixed::operator=(const Fixed &n)
 {
 	//this->_value = n.getRawBits();
 	this->setRawBits(n.getRawBits());
 	return (*this);
 }
-bool Fixed::operator >(Fixed &n) const
+bool Fixed::operator >(Fixed const &n) const
 {
 	if (_value > n.getRawBits())
 		return (1);
 	else
 		return (0);
 }
-bool Fixed::operator <(Fixed &n) const
+bool Fixed::operator <(Fixed const &n) const
 {
 	if (_value < n.getRawBits())
 		return (1);
 	else
 		return (0);
 }
-bool Fixed::operator >=(Fixed &n) const
+bool Fixed::operator >=(Fixed const &n) const
 {
 	if (_value >= n.getRawBits())
 		return (1);
 	else
 		return (0);
 }
-bool Fixed::operator <=(Fixed &n) const
+bool Fixed::operator <=(Fixed const &n) const
 {
 	if (_value <= n.getRawBits())
 		return (1);
 	else
 		return (0);
 }
-bool Fixed::operator ==(Fixed &n) const
+bool Fixed::operator ==(Fixed const &n) const
 {
 	if (_value == n.getRawBits())
 		return (1);
 	else
 		return (0);
 }
-bool Fixed::operator !=(Fixed &n) const
+bool Fixed::operator !=(Fixed const &n) const
 {
 	if (_value != n.getRawBits())
 		return (1);
@@ -203,7 +151,6 @@ Fixed	Fixed::min(Fixed &ref1, Fixed &ref2)
 	else
 		return (ref2);
 }
-
 Fixed	Fixed::min(Fixed const &ref1, Fixed const &ref2)
 {
 	if (ref1.getRawBits() <= ref2.getRawBits())
@@ -211,7 +158,6 @@ Fixed	Fixed::min(Fixed const &ref1, Fixed const &ref2)
 	else
 		return (ref2);
 }
-
 Fixed	Fixed::max(Fixed &ref1, Fixed &ref2)
 {
 	if (ref1.getRawBits() >= ref2.getRawBits())
@@ -219,7 +165,6 @@ Fixed	Fixed::max(Fixed &ref1, Fixed &ref2)
 	else
 		return (ref2);
 }
-
 Fixed	Fixed::max(Fixed const &ref1, Fixed const &ref2)
 {
 	if (ref1.getRawBits() >= ref2.getRawBits())
@@ -228,6 +173,25 @@ Fixed	Fixed::max(Fixed const &ref1, Fixed const &ref2)
 		return (ref2);
 }
 
+
+
+int bit_is_one(size_t const size, void const *const ptr, int search_index)
+{
+	unsigned char *b = (unsigned char *)ptr;
+	unsigned char byte;
+	int i, j;
+
+	for (i = size - 1; i >= 0; i--)
+	{
+		for (j = 7; j >= 0; j--)
+		{
+			byte = (b[i] >> j) & 1;
+			if (i == 0 && j == search_index && byte == 1)
+				return (1);
+		}
+	}
+	return (0);
+}
 
 
 

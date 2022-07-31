@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 21:01:50 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/30 20:51:44 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/31 02:19:10 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,27 +18,21 @@
 class Point
 {
 private:
-	Fixed _x;
-	Fixed _y;
+	Fixed const	_x;
+	Fixed const	_y;
 
 public:
 	Point();
 	Point(float x, float y);
 	Point(const Point &copie);
 	~Point();
-	
-	Point &operator = ( const Point &n ) const;
+	Point &operator = ( const Point &rhs );
 
-	Fixed	getX();
-	Fixed	getY();
-	void	setX(const float x);
-	void	setY(const float y);
-
-
-	bool bsp( Point const a, Point const b, Point const c, Point const point);
+	Fixed	getX() const;
+	Fixed	getY() const;
 	void	display() const;
-
 };
 
+bool	bsp( Point const a, Point const b, Point const c, Point const point);
 
 #endif
