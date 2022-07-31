@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 02:01:03 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/31 02:29:28 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/31 21:07:18 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ private:
 	
 public:
 	Line();
-	Line(Point(), Point());
+	//Line(Point const p1, Point const p2);
 	~Line();
 };
 

@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 02:01:25 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/31 02:29:33 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/07/31 21:07:23 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Point.hpp"
 
 /*
-Line(Point p1, Point p2)
+Line(Point &p1, Point &p2)
 {
 	return;
 }
