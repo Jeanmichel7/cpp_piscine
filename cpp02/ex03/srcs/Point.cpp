@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 21:01:54 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/01 00:03:53 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/01 03:23:55 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ bool bsp( Point const A, Point const B, Point const C, Point const P)
 	b_line2 = 		A.getY() - (pente_line2 * A.getX());
 
 	pente_line3 = 	set_coef(B, C);
-	b_line3 = 		B.getY() - (pente_line3 * B.getX());
+	b_line3 = 		C.getY() - (pente_line3 * C.getX());
 
 	// verif point on line
 	if ((get_plan(P, pente_line1, b_line1) == 0)
@@ -105,8 +105,8 @@ bool bsp( Point const A, Point const B, Point const C, Point const P)
 
 std::ostream &operator<<(std::ostream &cout, const Point &inst)
 {
-	cout << "(" 
-	<< inst.getX() << ", "
+	cout << "(	" 
+	<< inst.getX() << ",	"
 	<< inst.getY() << ")";
 	return cout;
 }
