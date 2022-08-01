@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:57:57 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/31 21:21:15 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/01 03:27:46 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,8 +124,6 @@ Fixed Fixed::operator/(Fixed n) const
 }
 
 
-
-
 /* INCREMENTATION DECREMEMTAION */
 
 Fixed	&Fixed::operator ++()
@@ -139,8 +137,6 @@ Fixed	Fixed::operator ++(int)
 	++*this;
 	return temp;
 }
-
-
 
 
 /* FCT OPERTEUR SURCHARGE */
@@ -236,6 +232,9 @@ float Fixed::toFloat(void) const
 	}
 	return virgul_value;
 }
+
+
+
 std::ostream &operator<<(std::ostream &cout, const Fixed &instance)
 {
 	cout << instance.toFloat();

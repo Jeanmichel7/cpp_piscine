@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 21:01:54 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/01 03:23:55 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/01 03:28:00 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ float	Point::getY() const { return (_y.toFloat()); }
 int	get_plan(Point P, float pente, float b)
 {
 	float n = P.getY() - (((pente) * P.getX()) + b);
-	//std::cout << "n : " << n << std::endl;
 
 	if (n > (float)0)
 		return (1);
