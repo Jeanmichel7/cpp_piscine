@@ -6,25 +6,51 @@
 #    By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/06 16:45:03 by jrasser           #+#    #+#              #
-#    Updated: 2022/07/06 17:24:58 by jrasser          ###   ########.fr        #
+#    Updated: 2022/08/02 14:59:01 by jrasser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= 	main.cpp 
-				
-OBJS		= ${SRCS:.c=.o}
+BLU			= \033[0;34m
+GRN			= \033[0;32m
+RED			= \033[0;31m
+ERASE		= \033[2K\r
+END			= \033[0m
+CHECK 		= ✓
+
+SRCS 		= $(wildcard *.cpp) $(wildcard srcs/**.cpp)
+NAME		= prog
+OBJS_DIR	= objs/
+OBJS		= $(addprefix $(OBJS_DIR), $(notdir $(SRCS:.cpp=.o)))
 RM			= @rm -rf
-NAME 		= prog
-CC			= g++ -std=c++98
-CFLAGS		= -Wall -Wextra -g3 -fsanitize=address
+CC			= g++
+CFLAGS		= -std=c++98 -Wall -Wextra
+CPPFLAGS	= -I. -I./class
+DEBEUG		= -g -fsanitize=address
+
+objs/%.o: *%.cpp
+			@mkdir -p $(OBJS_DIR)
+			@${CC} $(CPPFLAGS) -o $@ -c $< ${CFLAGS} ${DEBEUG}
+			@printf	"$(ERASE) ${BLU}$ [BUILD]${RST} '$<' $(END)"
+
+objs/%.o: srcs/**%.cpp
+			@mkdir -p $(OBJS_DIR)
+			@${CC} $(CPPFLAGS) -o $@ -c $< ${CFLAGS} ${DEBEUG}
+			@printf	"$(ERASE) ${BLU}$ [BUILD]${RST} '$<' $(END)"
 
 ${NAME}	:	${OBJS}
-			@${CC} -o ${NAME} ${OBJS} ${CFLAGS}
+			@${CC} ${OBJS} -o $(NAME) ${CFLAGS} ${DEBEUG}
+			@echo "$(ERASE)$(GRN) [Successfully compiled]$(END)	$(CHECK) \n"
+			@echo "executable ./$(NAME)"
 
 all :		${NAME}
+
 clean :
+			${RM} $(OBJS)
+			@echo "$(GRN) [Clean]$(END) 			$(CHECK)"
+
 fclean :	clean
 			${RM} ${NAME}
+			@echo "$(GRN) [Fclean]$(END) 			$(CHECK)"
 
 re : 		fclean all
 

@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 16:42:56 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/06 19:37:12 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/02 23:05:11 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,25 +65,33 @@ int main(int argc, char **argv)
 	}
 
 	ifs >> str;
-	c = ifs.get();
+	//c = ifs.get();
 
 	while (ifs)
 	{
 		std::cout << "str : " << str << std::endl;
-		std::cout << "char : '" << c << "'" << std::endl;
+		//std::cout << "char : '" << c << "'" << std::endl << std::endl;
 
-
+		int i = 0;
+		while (str[i])
+		{
+			std::cout << "char : '" << str[i] << "'" << std::endl << std::endl;
+			i++;
+		}
 		if (str == argv[2])
 			ofs << argv[3];
 		else
 			ofs << str;
 
+
+/*
 		if ( c != EOF && ((c >= 9 && c <= 13) || c == ' ')) {
+			std::cout << "'" << c << "'" << std::endl;
 			ofs << c;
 		}
-
+*/
 		ifs >> str;
-		c = ifs.get();
+		//c = ifs.get();
 	}
 	//c = ifs.get();
 	ofs << str;
