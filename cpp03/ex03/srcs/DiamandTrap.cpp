@@ -6,14 +6,22 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 01:57:10 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/02 02:53:33 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/02 17:06:51 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string const name) :
-ScavTrap( name ), FragTrap( name )
+DiamondTrap::DiamondTrap( void )
+{
+	FragTrap::setHit(FragTrap::getHit());
+	ScavTrap::setEnergy(ScavTrap::getEnergy());
+	FragTrap::setDamage(FragTrap::getDamage());
+	return;
+}
+
+
+DiamondTrap::DiamondTrap(std::string const name)
 {
 	FragTrap::setHit(FragTrap::getHit());
 	ScavTrap::setEnergy(ScavTrap::getEnergy());
@@ -25,11 +33,11 @@ DiamondTrap::~DiamondTrap()
 {
 }
 
-inline void DiamondTrap::setHit(int n)
+void DiamondTrap::setHit(int n)
 {
 	FragTrap::setHit(n);
 }
-inline void DiamondTrap::setEnergy(int n)
+void DiamondTrap::setEnergy(int n)
 {
 	ScavTrap::setEnergy(n);
 }

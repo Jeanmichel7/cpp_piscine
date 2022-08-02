@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 22:45:54 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/06 15:52:37 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/02 22:16:29 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ Weapon::Weapon(std::string weapon_name)
 	return;
 }
 
-Weapon::~Weapon()
+Weapon::~Weapon( void )
 {
 	return;
 }
 
-const std::string Weapon::getType()
+const std::string Weapon::getType( void )
 {
 	return (this->_type);
 }

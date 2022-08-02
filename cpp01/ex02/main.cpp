@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 22:04:34 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/05 22:19:51 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/02 17:25:28 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main() {
 
 	std::cout
 	<< "The memory address of the string variable	( &str )	: "<< &str		<< std::endl
-	<< "The memory address held by stringPTR 		( &p_str )	: "<< &p_str	<< std::endl
+	<< "The memory address held by stringPTR 		( &p_str )	: "<< p_str	<< std::endl
 	<< "The memory address held by stringREF		( &r_str )	: "<< &r_str	<< std::endl
 	<< std::endl
 	<< "The value of the string variable 		( str )		: "<< str		<< std::endl

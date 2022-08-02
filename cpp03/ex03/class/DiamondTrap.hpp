@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 01:57:00 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/02 02:44:10 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/02 17:04:38 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ class DiamondTrap : public ScavTrap, public FragTrap
 {
 private:
 	std::string	const	_name;
+	
 
 public:
+	DiamondTrap();
 	DiamondTrap(std::string	const name);
 	~DiamondTrap();
 

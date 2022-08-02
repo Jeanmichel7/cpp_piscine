@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:37:45 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/05 22:02:20 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/02 15:01:14 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Zombie::~Zombie( void ) {
 }
 
 void	Zombie::announce( void ) {
-	std::cout << this->_name << ":: BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 void	Zombie::setName( std::string name ) {

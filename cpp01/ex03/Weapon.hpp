@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 22:45:51 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/06 15:52:39 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/02 22:16:30 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ private:
 public:
 	Weapon(std::string weapon_name);
 	~Weapon();
+
 	const std::string	getType();
 	void				setType(std::string weapon_name);
 };

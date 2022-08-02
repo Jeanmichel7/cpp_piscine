@@ -6,15 +6,15 @@
 #    By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/01 15:24:21 by jrasser           #+#    #+#              #
-#    Updated: 2022/08/02 00:54:13 by jrasser          ###   ########.fr        #
+#    Updated: 2022/08/02 16:59:57 by jrasser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-BLU			= \e[0;34m
-GRN			= \e[0;32m
-RED			= \e[0;31m
-ERASE		= \e[2K\r
-END			= \e[0m
+BLU			= \033[0;34m
+GRN			= \033[0;32m
+RED			= \033[0;31m
+ERASE		= \033[2K\r
+END			= \033[0m
 CHECK 		= ✓
 
 SRCS 		= $(wildcard *.cpp) $(wildcard srcs/**.cpp)

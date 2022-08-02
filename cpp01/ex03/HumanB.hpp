@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 22:46:01 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/06 16:01:01 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/02 21:51:46 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ private:
 public:
 	HumanB(std::string name);
 	~HumanB();
-	void	setWeapon(Weapon weapon);
+	void	setWeapon(Weapon &weapon);
 	void	attack();
 
 };
