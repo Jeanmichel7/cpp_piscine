@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 00:56:16 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/01 03:24:33 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 19:11:04 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,11 @@ Point const P)
 	{
 		for(int j = 0; j <= 20; j++)
 		{
-			
-			if (j == 0)
+			if (i == 20 && j == 0)
+				std::cout << "^";
+			else if (i == 0 && j == 20)
+				std::cout << ">";
+			else if (j == 0)
 				std::cout << "|";
 			else if (i == 0)
 				std::cout << "---";

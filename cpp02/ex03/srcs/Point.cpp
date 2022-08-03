@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 21:01:54 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/01 03:28:00 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 19:05:53 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ bool bsp( Point const A, Point const B, Point const C, Point const P)
 	|| (get_plan(P, pente_line2, b_line2) == 0)
 	|| (get_plan(P, pente_line3, b_line3) == 0))
 	{
-		std::cout << " sur une droite";
+		std::cout << "Sur une droite, ";
 		return (false);
 	}
 

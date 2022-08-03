@@ -6,15 +6,15 @@
 #    By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/06 22:12:23 by jrasser           #+#    #+#              #
-#    Updated: 2022/07/31 01:53:36 by jrasser          ###   ########.fr        #
+#    Updated: 2022/08/03 19:01:22 by jrasser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-BLU			= \e[0;34m
-GRN			= \e[0;32m
-RED			= \e[0;31m
-ERASE		= \e[2K\r
-END			= \e[0m
+BLU			= \033[0;34m
+GRN			= \033[0;32m
+RED			= \033[0;31m
+ERASE		= \033[2K\r
+END			= \033[0m
 CHECK 		= ✓
 
 SRCS 		= $(wildcard *.cpp) $(wildcard srcs/**.cpp)
@@ -24,7 +24,7 @@ OBJS		= $(addprefix $(OBJS_DIR), $(notdir $(SRCS:.cpp=.o)))
 RM			= @rm -rf
 CC			= g++
 CFLAGS		= -std=c++98 -Wall -Wextra
-CPPFLAGS	= -I. -I./class
+CPPFLAGS	= -I./ -I./class
 DEBEUG		= -g -fsanitize=address
 
 objs/%.o: *%.cpp
