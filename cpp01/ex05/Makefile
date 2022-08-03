@@ -6,7 +6,7 @@
 #    By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/06 22:12:23 by jrasser           #+#    #+#              #
-#    Updated: 2022/08/02 14:59:05 by jrasser          ###   ########.fr        #
+#    Updated: 2022/08/03 18:45:16 by jrasser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ objs/%.o: srcs/**%.cpp
 			@printf	"$(ERASE) ${BLU}$ [BUILD]${RST} '$<' $(END)"
 
 ${NAME}	:	${OBJS}
-			@${CC} ${OBJS} -o $(NAME) ${CFLAGS} ${DEBEUG}
+			@${CC} ${OBJS} -o $(NAME) ${CFLAGS} ${DEBEUG} 
 			@echo "$(ERASE)$(GRN) [Successfully compiled]$(END)	$(CHECK) \n"
 			@echo "executable ./$(NAME)"
 

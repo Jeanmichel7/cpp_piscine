@@ -6,9 +6,12 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 22:12:42 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/07 00:05:17 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 18:47:12 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#define BLU	"\e[0;34m"
+#define END	"\e[0m"
 
 #include "Harl.hpp"
 
@@ -26,27 +29,27 @@ void	Harl::debug() {
 	std::cout
 	<< "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup \
 burger. I really do!"
-	<< std::endl;
+	<< std::endl << std::endl;
 }
 
 void	Harl::info() {
 	std::cout
 	<< "I cannot believe adding extra bacon costs more money. You didn’t put \
 enough bacon in my burger! If you did, I wouldn’t be asking for more!"
-	<< std::endl;
+	<< std::endl << std::endl;
 }
 
 void	Harl::warning() {
 	std::cout
 	<< "I think I deserve to have some extra bacon for free. I’ve been coming for \
 years whereas you started working here since last month."
-	<< std::endl;
+	<< std::endl << std::endl;
 }
 
 void	Harl::error() {
 	std::cout
 	<< "This is unacceptable! I want to speak to the manager now."
-	<< std::endl;
+	<< std::endl << std::endl;
 }
 
 
@@ -72,7 +75,7 @@ void Harl::complain( std::string level )
 
 	//comparer les 2 tableaux
 	int	i;
-	std::cout << "input : " << level << std::endl;
+	std::cout << BLU "input : " END << level << std::endl;
 	for(i = 0; i < 4; i++) {
 		if (level == tab_levels[i]) {
 			(this->*tab_p_fct[i])();
@@ -80,7 +83,7 @@ void Harl::complain( std::string level )
 		}
 	}
 	if (i == 4)
-		std::cout << "Pas de correspondance" << std::endl;
+		std::cout << "Pas de correspondance" << std::endl << std::endl;
 }
 
 /*

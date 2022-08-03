@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 22:12:37 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/08 17:30:45 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 18:48:14 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "class/Harl.hpp"
+#include "Harl.hpp"
 
 int main(int argc, char **argv) {
 

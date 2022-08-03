@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 22:12:42 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/08 20:06:57 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 18:59:10 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
+
+#define BLU "\033[0;34m"
+#define END "\033[0m"
+#define RED "\033[0;31m"
 
 Harl::Harl()
 {
@@ -26,27 +30,27 @@ void	Harl::debug() const {
 	std::cout
 	<< "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup \
 burger. I really do!"
-	<< std::endl;
+	<< std::endl << std::endl;
 }
 
 void	Harl::info() const{
 	std::cout
 	<< "I cannot believe adding extra bacon costs more money. You didn’t put \
 enough bacon in my burger! If you did, I wouldn’t be asking for more!"
-	<< std::endl;
+	<< std::endl << std::endl;
 }
 
 void	Harl::warning() const{
 	std::cout
 	<< "I think I deserve to have some extra bacon for free. I’ve been coming for \
 years whereas you started working here since last month."
-	<< std::endl;
+	<< std::endl << std::endl;
 }
 
 void	Harl::error() const{
 	std::cout
 	<< "This is unacceptable! I want to speak to the manager now."
-	<< std::endl;
+	<< std::endl << std::endl;
 }
 
 
@@ -85,22 +89,36 @@ void Harl::complain( std::string level )
 	switch (i)
 	{
 	case (DEBUG) :
-		std::cout << "[" << tab_levels[i] << "]" << std::endl;
+		std::cout <<  BLU "[" << tab_levels[i] << "]" END << std::endl;
 		(this->*tab_p_fct[i])();
-		i++;
+		std::cout << BLU "[" << tab_levels[i + 1] << "]" END << std::endl;
+		(this->*tab_p_fct[i + 1])();
+		std::cout << BLU "[" << tab_levels[i + 2] << "]" END << std::endl;
+		(this->*tab_p_fct[i + 2])();
+		std::cout << BLU "[" << tab_levels[i + 3] << "]" END << std::endl;
+		(this->*tab_p_fct[i + 3])();
+		break;
 	case (INFO) :
-		std::cout << "[" << tab_levels[i] << "]" << std::endl;
+		std::cout << BLU "[" << tab_levels[i] << "]" END << std::endl;
 		(this->*tab_p_fct[i])();
+		std::cout << BLU "[" << tab_levels[i + 1] << "]" END << std::endl;
+		(this->*tab_p_fct[i + 1])();
+		std::cout << BLU "[" << tab_levels[i + 2] << "]" END << std::endl;
+		(this->*tab_p_fct[i + 2])();
 		i++;
+		break;
 	case (WARNING):
-		std::cout << "[" << tab_levels[i] << "]" << std::endl;
+		std::cout << BLU "[" << tab_levels[i] << "]" END << std::endl;
 		(this->*tab_p_fct[i])();
+		std::cout << BLU "[" << tab_levels[i + 1] << "]" END << std::endl;
+		(this->*tab_p_fct[i + 1])();
 		i++;
+		break;
 	case (ERROR):
-		std::cout << "[" << tab_levels[i] << "]" << std::endl;
+		std::cout << BLU "[" << tab_levels[i] << "]" END << std::endl;
 		(this->*tab_p_fct[i])();
 	    break;
-	default: std::cout << "Pas de correspondance" << std::endl;
+	default: std::cout << RED "Pas de correspondance" END << std::endl;
 	    break;
 	}
 }
