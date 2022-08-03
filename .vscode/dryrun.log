@@ -1,6 +1,6 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/jrasser/cursus/cpp_piscine'
-make: Leaving directory `/Users/jrasser/cursus/cpp_piscine'
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/jrasser/42/cpp_piscine'
+make: Leaving directory '/home/jrasser/42/cpp_piscine'
  
 make: *** No targets specified and no makefile found.  Stop.
 
