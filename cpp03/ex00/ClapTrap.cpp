@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:21:38 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/01 19:35:19 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 19:16:48 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,15 @@
 #define UNDERLINE "\e[4m"
 /* CONSTRUCTOR */
 
+ClapTrap::ClapTrap() :
+_name(NULL),
+_hit(10),
+_energy(10),
+_damage(0)
+{ 
+	std::cout << "Default constructor called" << std::endl;
+	return; 
+}
 
 ClapTrap::ClapTrap(const std::string name) :
 _name(name),

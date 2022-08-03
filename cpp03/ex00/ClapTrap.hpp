@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:21:41 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/01 19:04:56 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 19:16:49 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ private:
 	int 				_damage;
 
 public:
+	ClapTrap();
 	ClapTrap( const std::string name );
 	ClapTrap( const ClapTrap &copie );
 	void operator=( const ClapTrap &n );

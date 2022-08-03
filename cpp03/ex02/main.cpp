@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:21:06 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/02 01:36:41 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 19:40:02 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,7 @@ int	main(void)
 		}
 		if (goliath.getHit() < 60)
 		goliath.beRepaired(1);
-		
-		
+
 		if (goliath.getEnergy() > 0)
 		{
 			goliath.attack("david");
@@ -97,8 +96,6 @@ int	main(void)
 
 		if (i % 5 == 0)
 			david.guardGate();
-
-
 		i++;
 	}
 

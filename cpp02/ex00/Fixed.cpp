@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 22:57:57 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/28 03:35:17 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 19:14:22 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ Fixed::~Fixed()
 Fixed::Fixed(const Fixed &copie)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	//_int_static_const = copie._int_static_const;
 	_entier = copie.getRawBits();
 	return;
 }

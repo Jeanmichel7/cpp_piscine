@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:21:38 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/02 01:34:07 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 19:51:04 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,16 @@
 
 
 /* CONSTRUCTOR */
+
+ClapTrap::ClapTrap() :
+_name(""),
+_hit(100),
+_energy(50),
+_damage(20)
+{ 
+	std::cout << "Base class	CONSTRUCTOR called - " << getName() << std::endl;
+	return; 
+}
 
 ClapTrap::ClapTrap(const std::string name) :
 _name(name),

@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 21:43:08 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/02 01:16:38 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 19:51:16 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 #define END	"\e[0m"
 
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap() : ClapTrap()
+{
+	std::cout << GRY "Dervied class	CONSTRUCTOR called - " END << std::endl;
+	return; 
+}
 
 ScavTrap::ScavTrap( const std::string name ) : ClapTrap( name )
 {

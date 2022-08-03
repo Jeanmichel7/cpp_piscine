@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 00:05:16 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/02 01:21:02 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 19:32:16 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 #define END	"\e[0m"
 
 #include "FragTrap.hpp"
+
+FragTrap::FragTrap() : ClapTrap()
+{
+	std::cout << GRY "Dervied BIS class	CONSTRUCTOR called - " END << getName() << std::endl;
+	return; 
+}
 
 FragTrap::FragTrap(std::string const name) : ClapTrap( name )
 {

@@ -6,21 +6,31 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:21:38 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/02 01:34:07 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 19:35:05 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-#define GRN	"\e[0;32m"
-#define RED	"\e[0;31m"
-#define CYN	"\e[0;36m"
 #define GRY	"\e[1;30m"
+#define RED	"\e[0;31m"
+#define GRN	"\e[0;32m"
+#define CYN	"\e[0;36m"
 #define END	"\e[0m"
 #define UNDERLINE "\e[4m"
 
 
 /* CONSTRUCTOR */
+
+ClapTrap::ClapTrap() :
+_name(NULL),
+_hit(100),
+_energy(50),
+_damage(20)
+{ 
+	std::cout << "Base class	CONSTRUCTOR called - " << std::endl;
+	return; 
+}
 
 ClapTrap::ClapTrap(const std::string name) :
 _name(name),

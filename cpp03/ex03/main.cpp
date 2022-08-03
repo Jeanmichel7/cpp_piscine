@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:21:06 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/02 02:50:24 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 20:02:55 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,13 @@
 #define UNDER "\e[4m"
 #define END	"\e[0m"
 
-
 int	main(void)
 {
+	ClapTrap ingenior("The ingenior");
+
+	DiamondTrap robot("The diamond robot");
+	robot.whoAmI();
+
 	/*
 	std::cout << UNDER "------ SCAVTRAP (David)------" END << std::endl;
 
@@ -122,23 +126,7 @@ int	main(void)
 			std::cout << "goliath en difficulte" << std::endl;
 	}
 	std::cout << std::endl << std::endl;
-
-
 	*/
-
-
-
-	DiamondTrap robot("The diamond robot");
-
-
-	robot.whoAmI();
-
-
-
-
-
-
-
 
 	return (0);
 }
