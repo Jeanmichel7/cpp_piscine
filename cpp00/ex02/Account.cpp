@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 23:17:39 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/04 02:41:08 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/03 20:10:40 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	Account::_displayTimestamp( void ) {
 	time (&rawtime);
 	timeinfo = localtime (&rawtime);
 	strftime (buffer,80,"%Y%m%d_%H%M%S",timeinfo);
-	std::cout << "[" << buffer << "]";
+	std::cout << "[" << buffer << "] ";
 }
 
 void	Account::displayAccountsInfos( void ) {
