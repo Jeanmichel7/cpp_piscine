@@ -6,8 +6,49 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:02 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/03 21:23:40 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/04 02:26:53 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#define GRN "\e[0;32m"
+#define END "\e[0m"
+
 #include "Animal.hpp"
+
+Animal::Animal() : _type("")
+{
+	std::cout << "Constructor Animal" << std::endl;
+    Brain()
+	return;
+}
+
+Animal::Animal(Animal const &tmp) : _type(tmp._type)
+{
+	return;
+}
+
+Animal::~Animal()
+{
+	std::cout << "Destrutor Animal" << std::endl;
+	return;
+}
+
+void	Animal::operator =(Animal const &tmp)
+{
+	_type = tmp._type;
+	return;
+}
+
+
+
+std::string Animal::getType() const
+{
+	return (_type);
+}
+
+
+
+void	Animal::makeSound() const
+{
+	std::cout << GRN "🔊 No sound specific" END << std::endl;
+}

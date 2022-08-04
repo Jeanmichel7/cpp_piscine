@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/03 21:22:09 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/04 02:25:43 by jrasser          ###   ########.fr       */
+/*   Created: 2022/08/04 01:38:59 by jrasser           #+#    #+#             */
+/*   Updated: 2022/08/04 02:04:56 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __CAT_HPP__
-# define __CAT_HPP__
-
-#include "Animal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal
+Brain::Brain()
 {
+	std::cout << "Constructor Brain" << std::endl;
+	return;
+}
 
-private:
-	Brain 	*_ptr_brain;
+Brain::Brain(Brain const &tmp) : _ideas(tmp._ideas)
+{
+	return;
+}
 
-protected:
-	std::string _type;
-	
-public:
-	Cat();
-	Cat(Cat const &);
-	virtual ~Cat();
-	
-	void operator =(Cat const &);
-	std::string	getType() const;
+Brain::~Brain()
+{
+	std::cout << "Destrutor Brain" << std::endl;
+	return;
+}
 
-	void	makeSound() const;
-	
-};
-
-#endif
+void	Brain::operator =(Brain const &tmp)
+{
+	for(int i = 0; i < 100; i++)
+	{
+		_ideas[i] = tmp._ideas[i];
+	}
+	return;
+}
