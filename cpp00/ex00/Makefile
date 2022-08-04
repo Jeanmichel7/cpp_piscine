@@ -6,7 +6,7 @@
 #    By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/28 23:37:34 by jrasser           #+#    #+#              #
-#    Updated: 2022/08/03 20:07:08 by jrasser          ###   ########.fr        #
+#    Updated: 2022/08/04 16:54:26 by jrasser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ END			= \033[0m
 CHECK 		= ✓
 
 SRCS 		= $(wildcard *.cpp) $(wildcard srcs/**.cpp)
-NAME		= prog
+NAME		= megaphone
 OBJS_DIR	= objs/
 OBJS		= $(addprefix $(OBJS_DIR), $(notdir $(SRCS:.cpp=.o)))
 RM			= @rm -rf

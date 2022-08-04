@@ -6,11 +6,11 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:13:03 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/03 01:20:19 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/04 16:23:43 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../main.hpp"
+#include "main.hpp"
 
 PhoneBook::PhoneBook (void) {
 	return;

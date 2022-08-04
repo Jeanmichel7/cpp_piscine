@@ -6,7 +6,7 @@
 #    By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/04 18:43:19 by jrasser           #+#    #+#              #
-#    Updated: 2022/08/02 14:56:38 by jrasser          ###   ########.fr        #
+#    Updated: 2022/08/04 17:24:20 by jrasser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ RM			= @rm -rf
 CC			= g++
 CFLAGS		= -std=c++98 -Wall -Wextra
 CPPFLAGS	= -I. -I./class
-DEBEUG		= -g -fsanitize=address
+DEBEUG		= 
 
 objs/%.o: *%.cpp
 			@mkdir -p $(OBJS_DIR)

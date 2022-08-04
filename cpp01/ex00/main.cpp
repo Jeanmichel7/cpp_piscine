@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 18:43:25 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/02 15:00:14 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/04 17:27:29 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@ void	fct_extern(Zombie *zombie) {
 	zombie->announce();
 }
 
+
 int main() {
-	Zombie	instance("Zombie1");
-	Zombie	*zombie1 = new Zombie("Zombie2");
+	Zombie	instance("Zombie");
 
 	instance.randomChump("Zombie_random");
-	fct_extern(zombie1);
+	Zombie *new_zombie = instance.newZombie("newZombie");
+	fct_extern(new_zombie);
 
-	delete(zombie1);
+	delete new_zombie;
 	return 0;
 }

@@ -6,11 +6,11 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:46:30 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/03 00:50:35 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/04 16:23:38 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../main.hpp"
+#include "main.hpp"
 
 Contact::Contact (void) {
 	this->first_name = "";

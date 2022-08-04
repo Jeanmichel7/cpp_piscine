@@ -6,10 +6,16 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 18:43:38 by jrasser           #+#    #+#             */
-/*   Updated: 2022/07/05 15:16:49 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/04 17:20:56 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include <new>
 
+Zombie*	Zombie::newZombie( std::string name )
+{
+	Zombie* ret;
+
+	ret = new Zombie(name);
+	return (ret);
+}
