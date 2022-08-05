@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:21:38 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/03 19:16:48 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/05 11:53:09 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@
 #define GRY	"\e[1;30m"
 #define END	"\e[0m"
 #define UNDERLINE "\e[4m"
+
 /* CONSTRUCTOR */
 
 ClapTrap::ClapTrap() :
-_name(NULL),
+_name(""),
 _hit(10),
 _energy(10),
 _damage(0)

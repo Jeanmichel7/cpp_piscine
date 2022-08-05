@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:02 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/04 00:59:20 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/05 12:23:26 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,6 @@ std::string Animal::getType() const
 {
 	return (_type);
 }
-
-
 
 void	Animal::makeSound() const
 {

@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:21:41 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/03 19:18:36 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/05 12:00:55 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string	const	_name;
 	int 				_hit;
 	int 				_energy;

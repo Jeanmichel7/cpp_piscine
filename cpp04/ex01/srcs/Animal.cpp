@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:02 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/04 02:26:53 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/05 11:46:52 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,10 @@ void	Animal::operator =(Animal const &tmp)
 	return;
 }
 
-
-
 std::string Animal::getType() const
 {
 	return (_type);
 }
-
-
 
 void	Animal::makeSound() const
 {

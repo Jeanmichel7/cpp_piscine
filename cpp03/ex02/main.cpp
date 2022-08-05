@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:21:06 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/03 19:40:02 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/05 12:06:34 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,15 @@
 #include "FragTrap.hpp"
 
 #define UNDER "\e[4m"
+#define BLD "\e[1m"
 #define END	"\e[0m"
+#define BLU	"\e[1;34m"
+
 
 
 int	main(void)
 {
-	std::cout << UNDER "------ SCAVTRAP (David)------" END << std::endl;
+	std::cout << BLU"-------- SCAVTRAP (David) --------" END << std::endl << std::endl;
 
 	std::cout << UNDER "Test constructor standard" END << std::endl;
 	ScavTrap	david("David");
@@ -44,7 +47,7 @@ int	main(void)
 
 
 
-	std::cout << UNDER "------ FRAGTRAP (Goliath)------" END << std::endl;
+	std::cout << BLU "-------- FRAGTRAP (Goliath) --------" END  << std::endl << std::endl;
 
 	std::cout << UNDER "Test constructor standard" END << std::endl;
 	FragTrap	goliath("Goliath");
