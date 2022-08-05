@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:06 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/04 02:05:36 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/05 19:17:10 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ public:
 	Dog();
 	Dog(Dog const &);
 	virtual ~Dog();
-	
 	void operator =(Dog const &);
+	
 	std::string	getType() const;
-
-	void	makeSound() const;
+	Brain		*AGetBrain() const;
+	void		makeSound() const;
 	
 };
 

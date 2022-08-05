@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:09 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/04 02:25:43 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/05 19:13:28 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@
 class Cat : public Animal
 {
 
-private:
-	Brain 	*_ptr_brain;
-
 protected:
 	std::string _type;
 	
@@ -29,11 +26,11 @@ public:
 	Cat();
 	Cat(Cat const &);
 	virtual ~Cat();
-	
 	void operator =(Cat const &);
+	
 	std::string	getType() const;
-
-	void	makeSound() const;
+	Brain		*AGetBrain() const;
+	void		makeSound() const;
 	
 };
 

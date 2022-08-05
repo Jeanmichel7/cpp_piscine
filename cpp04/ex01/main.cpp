@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:24 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/04 01:30:56 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/05 19:58:12 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,31 @@
 
 int main()
 {
-	std::cout  << std::endl << UND "Test Animaux" END << std::endl << std::endl;
-	const Animal *meta = new Animal();
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
-	
-	std::cout << "Type : " << j->getType() << " " << std::endl;
-	std::cout << "Type : " << i->getType() << " " << std::endl;
-	j->makeSound();
-	i->makeSound();
-	meta->makeSound();
+	std::cout  << std::endl << UND "Construct Animals" END << std::endl << std::endl;
+	Animal *tab[100];
 
-	delete meta;
-	delete j;
-	delete i;
+	for(int i = 0; i < 100; i++)
+	{
+		if (i < 50)
+			tab[i] = new Cat();
+		else
+			tab[i] = new Dog();
+	}
+
+
+	std::cout << std::endl << UND "Get Ideas's Animals" END << std::endl << std::endl;
+	for(int i = 0; i < 100; i++)
+	{
+		std::cout << "Animal's idea " << i << " ( " << tab[i]->getType() << " ) : "
+		<< tab[i]->AGetBrain()->getIdea1()
+		<< std::endl;
+	}
+
+
+	std::cout << std::endl << UND "Destroy Animals" END << std::endl << std::endl;
+	for(int i =0; i < 100; i++)
+		delete tab[i];
+
 
 	return 0;
 }

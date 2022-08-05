@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:04 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/04 02:26:12 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/05 19:24:16 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,24 @@
 #include <iostream>
 #include "Brain.hpp"
 
-class Animal : public Brain
+class Animal
 {
 
 private:
-	Brain *_ptrBrain;
 
 protected:
+	Brain *_ptr_brain;
 	std::string _type;
 
 public:
 	Animal();
 	Animal(Animal const &);
 	virtual ~Animal();
-	
 	void operator =(Animal const &);
+	
 	virtual std::string	getType() const;
-
-	virtual void	makeSound() const;
+	virtual Brain		*AGetBrain() const = 0;
+	virtual void		makeSound() const;
 
 };
 

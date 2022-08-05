@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:02 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/05 11:46:52 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/05 19:05:25 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #define END "\e[0m"
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 Animal::Animal() : _type("")
 {
 	std::cout << "Constructor Animal" << std::endl;
-    Brain()
 	return;
 }
 
@@ -47,4 +47,9 @@ std::string Animal::getType() const
 void	Animal::makeSound() const
 {
 	std::cout << GRN "🔊 No sound specific" END << std::endl;
+}
+
+Brain *Animal::AGetBrain() const
+{
+	return (_ptr_brain);
 }

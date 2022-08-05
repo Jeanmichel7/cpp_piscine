@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 01:38:29 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/04 02:21:21 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/05 19:57:59 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,23 @@
 # define __BRAIN_HPP__
 
 #include <iostream>
+#include <string>
+
 
 class Brain
 {
+
 private:
+	std::string _ideas[100];
 
 public:
 	Brain();
 	Brain(Brain const &);
 	void	operator =(Brain const &);
 	~Brain();
-	
-	std::string _ideas[100];
+
+	void		setIdea1( int idea);
+	std::string getIdea1();
 };
 
 
