@@ -6,17 +6,11 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 00:01:42 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 03:17:09 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 05:02:37 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Materia.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
-#include "Characterinterface.hpp"
 #include "Character.hpp"
-#include "Materiasourceinterface.hpp"
-#include "Materiasource.hpp"
 
 Character::Character() : _name("")
 {

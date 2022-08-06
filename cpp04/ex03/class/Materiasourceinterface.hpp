@@ -6,20 +6,15 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 00:59:22 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 03:30:49 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 04:44:20 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __IMATERIA_SRC_HPP__
 # define __IMATERIA_SRC_HPP__
 
-#include "Materia.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
-#include "Characterinterface.hpp"
-#include "Character.hpp"
-#include "Materiasourceinterface.hpp"
-#include "Materiasource.hpp"
+//#include "Amateria.hpp"
+class AMateria;
 
 class IMateriaSource
 {

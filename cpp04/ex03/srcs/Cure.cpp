@@ -6,17 +6,11 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:44:13 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 03:17:26 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 05:02:50 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Materia.hpp"
-#include "Ice.hpp"
 #include "Cure.hpp"
-#include "Characterinterface.hpp"
-#include "Character.hpp"
-#include "Materiasourceinterface.hpp"
-#include "Materiasource.hpp"
 
 Cure::Cure() :_type("cure")
 {

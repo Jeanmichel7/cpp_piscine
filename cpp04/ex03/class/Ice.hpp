@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:19:18 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 02:44:39 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 04:56:03 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,8 @@
 # define __ICE_HPP__
 
 #include <iostream>
-#include "Materia.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
+#include "Amateria.hpp"
 #include "Characterinterface.hpp"
-#include "Character.hpp"
-#include "Materiasourceinterface.hpp"
-#include "Materiasource.hpp"
 
 class Ice : public AMateria
 {

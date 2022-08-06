@@ -6,30 +6,29 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 02:21:30 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 03:20:17 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 04:52:58 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __MATERIA_SRC_HPP__
 # define __MATERIA_SRC_HPP__
 
-#include "Materia.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
-#include "Characterinterface.hpp"
-#include "Character.hpp"
-#include "Materiasourceinterface.hpp"
-#include "Materiasource.hpp"
+#include "Amateria.hpp"
 
-class MateriaSource : public IMateriaSource
+//class Ice;
+//class Cure;
+
+class MateriaSource
 {
-private:
+protected:
 	AMateria *_m_tmp;
 
 public:
 	MateriaSource();
+	MateriaSource(MateriaSource const &);
+	void operator = (MateriaSource const &);
 
-	virtual ~MateriaSource() {}
+	virtual ~MateriaSource();
 	void learnMateria(AMateria*);
 	AMateria* createMateria(std::string const & type);
 

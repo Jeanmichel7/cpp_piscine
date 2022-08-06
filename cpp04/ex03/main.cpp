@@ -6,11 +6,12 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:09 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 02:35:15 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 05:03:06 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Materia.hpp"
+
+#include "Amateria.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
 #include "Characterinterface.hpp"
@@ -20,6 +21,11 @@
 
 int main()
 {
+
+    //AMateria *test = new Ice();
+
+	
+
 	IMateriaSource *src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
@@ -43,5 +49,7 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
+
 	return 0;
 }
+

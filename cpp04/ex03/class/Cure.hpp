@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:19:58 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 02:45:43 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 04:32:57 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 # define __CURE_HPP__
 
 #include <iostream>
-#include "Materia.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
+#include "Amateria.hpp"
 #include "Characterinterface.hpp"
-#include "Character.hpp"
-#include "Materiasourceinterface.hpp"
-#include "Materiasource.hpp"
+
 
 class Cure : public AMateria
 {

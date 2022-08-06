@@ -6,20 +6,15 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 02:21:28 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 03:17:31 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 05:00:07 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Materia.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
-#include "Characterinterface.hpp"
-#include "Character.hpp"
-#include "Materiasourceinterface.hpp"
 #include "Materiasource.hpp"
 
-MateriaSource::MateriaSource() : _m_tmp(NULL)
+MateriaSource::MateriaSource()
 {
+	//_m_tmp = new AMateria();
 	return;
 }
 
@@ -28,17 +23,30 @@ MateriaSource::~MateriaSource()
 	return;
 }
 
+MateriaSource::MateriaSource(MateriaSource const &tmp)
+{
+	_m_tmp = tmp._m_tmp;
+	return;
+}
+
+void MateriaSource::operator = (MateriaSource const &tmp)
+{
+	_m_tmp = tmp._m_tmp;
+	return;
+}
+
+
 
 
 
 void MateriaSource::learnMateria(AMateria *tmp)
 {
 	_m_tmp = tmp;
-	return;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
+	/*
 	AMateria *new_ama;
 	
 	if (type == "ice")
@@ -49,4 +57,5 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 		return (0);
 
 	return new_ama;
+	*/
 }

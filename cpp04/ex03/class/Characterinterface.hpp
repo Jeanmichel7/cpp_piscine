@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:09:19 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 03:30:25 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 04:42:59 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,8 @@
 # define __ICHARACTER_HPP__
 
 #include <iostream>
-#include "Materia.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
-#include "Characterinterface.hpp"
-#include "Character.hpp"
-#include "Materiasourceinterface.hpp"
-#include "Materiasource.hpp"
+//#include "Amateria.hpp"
+class AMateria;
 
 class ICharacter
 {
