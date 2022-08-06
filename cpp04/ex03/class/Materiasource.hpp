@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 02:21:30 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 02:55:16 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 03:20:17 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ private:
 public:
 	MateriaSource();
 
-	
 	virtual ~MateriaSource() {}
 	void learnMateria(AMateria*);
 	AMateria* createMateria(std::string const & type);

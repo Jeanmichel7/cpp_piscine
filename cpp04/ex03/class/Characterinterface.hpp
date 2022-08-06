@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:09:19 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 03:12:34 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 03:30:25 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,7 @@
 class ICharacter
 {
 
-protected:
-	std::string		_name;
-	//const AMateria *_item[4];
-	//const AMateria *_trash[10];
-
 public:
-	ICharacter();
-	ICharacter(std::string name);
 	virtual ~ICharacter() {}
 	virtual std::string const & getName() const = 0;
 	virtual void equip(AMateria* m) = 0;

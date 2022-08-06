@@ -6,13 +6,17 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 00:01:42 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 03:10:23 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 03:17:09 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Character.hpp"
+#include "Materia.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+#include "Characterinterface.hpp"
+#include "Character.hpp"
+#include "Materiasourceinterface.hpp"
+#include "Materiasource.hpp"
 
 Character::Character() : _name("")
 {
@@ -23,7 +27,6 @@ Character::Character() : _name("")
 	}
 	return;
 }
-
 Character::Character(std::string name) : _name(name)
 {
 	for(int i = 0; i < 4; i++)
@@ -48,6 +51,9 @@ Character::~Character()
 }
 
 
+
+
+
 Character::Character(Character const &tmp)
 {
 	_name = tmp._name;
@@ -69,7 +75,6 @@ Character::Character(Character const &tmp)
 	}
 	return;
 }
-
 void	Character::operator= (Character const &tmp)
 {
 	_name = tmp._name;
@@ -92,17 +97,10 @@ void	Character::operator= (Character const &tmp)
 
 
 
-
-
-
-
-
-
 std::string const &Character::getName() const
 {
 	return (_name);
 }
-
 void Character::equip(AMateria* m)
 {
 	for(int i = 0; i < 4; i++)
@@ -115,7 +113,6 @@ void Character::equip(AMateria* m)
 	}
 	return;
 }
-
 void Character::unequip(int idx)
 {
 	int idx_new = 0;

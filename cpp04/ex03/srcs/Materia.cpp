@@ -6,11 +6,17 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:22:36 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 00:34:06 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 03:17:19 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Materia.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
+#include "Characterinterface.hpp"
+#include "Character.hpp"
+#include "Materiasourceinterface.hpp"
+#include "Materiasource.hpp"
 
 AMateria::AMateria() : _type("")
 {
