@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 00:01:42 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 01:12:10 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 03:10:23 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,7 +144,10 @@ void Character::unequip(int idx)
 	_item[idx] = NULL;
 }
 
-void Character::use(int idx, Character& target)  // A revoir ///////////////////////////////
+
+
+// A revoir ///////////////////////////////
+void Character::use(int idx, Character& target)
 {
 
 /*
