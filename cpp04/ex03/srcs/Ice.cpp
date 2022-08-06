@@ -6,9 +6,12 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:36:53 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 06:41:19 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 14:00:56 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#define ITA "\033[3;30m"
+#define END "\033[0m"
 
 #include "Ice.hpp"
 
@@ -46,7 +49,7 @@ AMateria *Ice::clone() const
 
 void Ice::use(ICharacter &target)
 {
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	std::cout << "🏹" ITA << " * shoots an ice bolt at " << target.getName() << " *" END << std::endl;
 }
 
 

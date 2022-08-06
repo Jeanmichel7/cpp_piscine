@@ -6,9 +6,15 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 00:01:42 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 07:36:51 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 14:10:20 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#define RED "\033[0;31m"
+#define PRP "\033[0;35m"
+#define GRY	"\033[1;30m"
+#define UND "\033[4m"
+#define END "\033[0m"
 
 #include "Character.hpp"
 
@@ -96,17 +102,17 @@ void Character::equip(AMateria *m)
 		{
 			if (m == NULL)
 			{
-				std::cout << "Type of material not recognized" << std::endl;
+				std::cout << RED "Type of materia not recognized" END << std::endl;
 				return;
 			}
-			std::cout << "Equipe materia " << m->getType() << " (" << i + 1 << "/4)" << std::endl;
+			std::cout << PRP << getName() << " equipe materia " << m->getType() << " : item[" << i << "]" END << std::endl;
 			_item[i] = m;
 			return;
 		}
 	}
 	if (i == 4)
 	{
-		std::cout << "Cannot equip materia because player is full" << std::endl;
+		std::cout << RED "Cannot equip materia because player is full" END<< std::endl;
 		delete m;
 	}
 	return;
@@ -115,8 +121,8 @@ void Character::equip(AMateria *m)
 void Character::unequip(int idx)
 {
 	int idx_new = 0;
-
-	for (int i = 0; i < 4; i++)
+	int i;
+	for (i = 0; i < 4; i++)
 	{
 		if (_trash[i] == NULL)
 		{
@@ -124,12 +130,9 @@ void Character::unequip(int idx)
 			break;
 		}
 	}
-
-	std::cout << "Trash : (" << idx_new + 1 << "/4)" << std::endl;
-
-	if (idx_new == 3)
+	if (i == 4)
 	{
-		std::cout << "Trash full -> delete all materia" << std::endl;
+		std::cout << RED "Trash full -> delete all materia" END << std::endl;
 		for (int i = 0; i < 4; i++)
 		{
 			delete _trash[i];
@@ -140,21 +143,22 @@ void Character::unequip(int idx)
 
 	if (idx > 3 || _item[idx] == NULL)
 	{
-		std::cout << "Cannot unequip item " << idx + 1 << "/4" << std::endl;
+		std::cout << "Cannot unequip item[" << idx << "]" << std::endl;
 		return;
 	}
 	else
-		std::cout << "Player unequip item " << idx + 1 << "/4" << std::endl;
+		std::cout << GRY << getName() << " unequip item[" << idx << "]" END << std::endl << std::endl;
 
 	_trash[idx_new] = _item[idx];
 	_item[idx] = NULL;
+	std::cout << "Trash : (" << idx_new + 1 << "/4)" << std::endl;
 }
 
 void Character::use(int idx, ICharacter &target)
 {
 	if (_item[idx] != NULL)
 	{
-		std::cout << "Use materia " << _item[idx]->getType() << " on " << target.getName() << std::endl;
+		std::cout << getName() << " use materia " << _item[idx]->getType() << " on " << target.getName() << std::endl;
 		_item[idx]->use(target);
 	}
 	else

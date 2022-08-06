@@ -6,9 +6,12 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:44:13 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 06:41:33 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 14:00:45 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#define ITA "\033[3;30m"
+#define END "\033[0m"
 
 #include "Cure.hpp"
 
@@ -46,6 +49,6 @@ AMateria *Cure::clone() const
 
 void Cure::use(ICharacter &target)
 {
-	std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
+	std::cout << "💊" ITA << " * heals " << target.getName() << "’s wounds *" END << std::endl;
 }
 

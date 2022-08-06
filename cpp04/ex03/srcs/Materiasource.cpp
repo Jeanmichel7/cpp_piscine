@@ -6,9 +6,17 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 02:21:28 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 07:45:04 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 13:59:14 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#define RED "\033[0;31m"
+#define GRN "\033[0;32m"
+#define TST "\033[0;33m"
+#define BLU "\033[0;34m"
+#define TST2 "\033[0;35m"
+#define END "\033[0m"
+#define UND "\e[4m"
 
 #include "Materiasource.hpp"
 
@@ -57,13 +65,13 @@ void MateriaSource::learnMateria(AMateria *tmp)
 	}
 	if (i == 4)
 	{
-		std::cout << "Cannot learn materia, full inventory " << std::endl;
+		std::cout << RED "Cannot learn materia," END " full inventory" << std::endl;
 		delete tmp;
 		return;
 	}
 	else
 	{
-		std::cout << "Learn materia : " << tmp->getType() << " " << i + 1 << "/4" << std::endl;
+		std::cout << GRN "Learn materia : " << tmp->getType() << " " << i + 1 << "/4" END << std::endl;
 		_m_tmp[idx_new_pos] = tmp;
 	}
 }
@@ -81,10 +89,10 @@ AMateria *MateriaSource::createMateria(std::string const &type)
 				tmp = new Cure();
 			else
 				tmp = NULL;
-			std::cout << "Create materia " << type << std::endl;
+			std::cout << BLU "Create materia '" << type << "'" END << std::endl;
 			return tmp;
 		}
 	}
-	std::cout << "type '" << type << "' cannot create new materia " << std::endl;
+	std::cout << RED "type '" << type << "' cannot create new materia " END << std::endl;
 	return NULL;
 }
