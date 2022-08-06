@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 02:21:30 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 05:46:23 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 07:43:52 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 class MateriaSource : public IMateriaSource
 {
 protected:
-	AMateria *_m_tmp[10];
+	AMateria *_m_tmp[4];
 
 public:
 	MateriaSource();

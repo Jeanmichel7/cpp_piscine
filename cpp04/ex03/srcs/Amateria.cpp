@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:22:36 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 06:17:48 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 06:46:34 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,5 @@ std::string const &AMateria::getType() const
 
 void AMateria::use(ICharacter &target)
 {
-	std::cout << "Nothings to display" << std::endl;
+	std::cout << "Nothings to display for " << target.getName() << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 02:21:28 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 06:42:44 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 07:45:04 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 MateriaSource::MateriaSource()
 {
-	for(int i = 0; i < 10; i++)
+	for (int i = 0; i < 4; i++)
 		_m_tmp[i] = NULL;
 	return;
 }
 
 MateriaSource::~MateriaSource()
 {
-	for(int i = 0; i < 10; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		if (_m_tmp[i] != NULL)
 			delete _m_tmp[i];
@@ -31,27 +31,23 @@ MateriaSource::~MateriaSource()
 
 MateriaSource::MateriaSource(MateriaSource const &tmp)
 {
-	for(int i = 0; i < 10; i++)
+	for (int i = 0; i < 4; i++)
 		_m_tmp[i] = tmp._m_tmp[i];
 	return;
 }
 
-void MateriaSource::operator = (MateriaSource const &tmp)
+void MateriaSource::operator=(MateriaSource const &tmp)
 {
-	for(int i = 0; i < 10; i++)
+	for (int i = 0; i < 4; i++)
 		_m_tmp[i] = tmp._m_tmp[i];
 	return;
 }
-
-
-
-
 
 void MateriaSource::learnMateria(AMateria *tmp)
 {
 	int idx_new_pos = 0;
-
-	for(int i = 0; i < 10; i++)
+	int i;
+	for (i = 0; i < 4; i++)
 	{
 		if (_m_tmp[i] == NULL)
 		{
@@ -59,15 +55,24 @@ void MateriaSource::learnMateria(AMateria *tmp)
 			break;
 		}
 	}
-	std::cout << "learn materia : "<< tmp->getType() << std::endl;
-	_m_tmp[idx_new_pos] = tmp;
+	if (i == 4)
+	{
+		std::cout << "Cannot learn materia, full inventory " << std::endl;
+		delete tmp;
+		return;
+	}
+	else
+	{
+		std::cout << "Learn materia : " << tmp->getType() << " " << i + 1 << "/4" << std::endl;
+		_m_tmp[idx_new_pos] = tmp;
+	}
 }
 
-AMateria* MateriaSource::createMateria(std::string const & type)
+AMateria *MateriaSource::createMateria(std::string const &type)
 {
-	for(int i = 0; i < 10; i++)
+	for (int i = 0; i < 4; i++)
 	{
-		if (_m_tmp[i] != NULL && _m_tmp[i]->getType() == type)
+		if (_m_tmp[i] == NULL)
 		{
 			AMateria *tmp;
 			if (type == "ice")
@@ -75,10 +80,11 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 			else if (type == "cure")
 				tmp = new Cure();
 			else
-				tmp = 0;
+				tmp = NULL;
+			std::cout << "Create materia " << type << std::endl;
 			return tmp;
 		}
 	}
-	std::cout << "type '"<< type <<"' non reconnu pour create new materia " << std::endl;
-	return 0;
+	std::cout << "type '" << type << "' cannot create new materia " << std::endl;
+	return NULL;
 }
