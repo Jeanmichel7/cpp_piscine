@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 00:01:01 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 05:02:02 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 06:16:45 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,14 @@
 
 #include <iostream>
 #include "Amateria.hpp"
+#include "Characterinterface.hpp"
 
-class Character
+class Character : public ICharacter
 {
 
 	std::string		_name;
-	const AMateria	*_item[4];
-	const AMateria	*_trash[4];
+	AMateria	*_item[4];
+	AMateria	*_trash[4];
 
 public:
 	Character();
@@ -33,7 +34,8 @@ public:
 	std::string const & getName() const;
 	void equip(AMateria* m);
 	void unequip(int idx);
-	void use(int idx, Character& target);
+	void use(int idx, ICharacter &target);
 };
 
 #endif
+ 

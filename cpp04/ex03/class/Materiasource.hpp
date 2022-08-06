@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 02:21:30 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 04:52:58 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 05:46:23 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,26 @@
 # define __MATERIA_SRC_HPP__
 
 #include "Amateria.hpp"
+#include "Materiasourceinterface.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 //class Ice;
 //class Cure;
 
-class MateriaSource
+class MateriaSource : public IMateriaSource
 {
 protected:
-	AMateria *_m_tmp;
+	AMateria *_m_tmp[10];
 
 public:
 	MateriaSource();
-	MateriaSource(MateriaSource const &);
-	void operator = (MateriaSource const &);
-
+	MateriaSource( MateriaSource const & );
+	void operator = ( MateriaSource const & );
 	virtual ~MateriaSource();
-	void learnMateria(AMateria*);
-	AMateria* createMateria(std::string const & type);
+	
+	void 		learnMateria( AMateria* );
+	AMateria*	createMateria( std::string const & type );
 
 };
 

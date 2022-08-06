@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 00:01:42 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 05:02:37 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 06:16:59 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,36 +25,28 @@ Character::Character(std::string name) : _name(name)
 {
 	for(int i = 0; i < 4; i++)
 	{
-		if (_item[i] != NULL)
-			delete _item[i];
-		if (_trash[i] != NULL)
-			delete _trash[i];
+		_item[i] = NULL;
+		_trash[i] = NULL;
 	}
-	delete [] _item;
-	delete [] _trash;
 	return;
 }
 Character::~Character()
 {
 	for(int i = 0; i < 4; i++)
 	{
-		_item[i] = NULL;
-		_trash[i] = NULL;
+		if (_item[i] != NULL)
+			delete _item[i];
+		if (_trash[i] != NULL)
+			delete _trash[i];
 	}
 	return;
 }
-
-
-
-
-
 Character::Character(Character const &tmp)
 {
+	AMateria *new_mat[4];
+	AMateria *new_trash[4];
+	
 	_name = tmp._name;
-	const AMateria *new_mat[4];
-	const AMateria *new_trash[4];
-
-
 	for(int i = 0; i < 4; i++)
 	{
 		// check old materia
@@ -67,6 +59,8 @@ Character::Character(Character const &tmp)
 		new_mat[i] = tmp._item[i];
 		new_trash[i] = tmp._trash[i];
 	}
+	*_item = *new_mat;
+	*_trash = *new_trash;
 	return;
 }
 void	Character::operator= (Character const &tmp)
@@ -135,17 +129,8 @@ void Character::unequip(int idx)
 	_item[idx] = NULL;
 }
 
-
-
-// A revoir ///////////////////////////////
-void Character::use(int idx, Character& target)
+void Character::use(int idx, ICharacter &target)
 {
-
-/*
-	if (_item[idx]->getType() == "ice")
-		Ice::use(target);
-	else if (_item[idx]->getType() == "cure")
-		Cure::use(target);
-*/
+	_item[idx]->use(target);
 }
 
