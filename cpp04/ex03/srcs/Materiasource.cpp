@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 02:21:28 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 06:10:47 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 06:42:44 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ MateriaSource::MateriaSource()
 
 MateriaSource::~MateriaSource()
 {
+	for(int i = 0; i < 10; i++)
+	{
+		if (_m_tmp[i] != NULL)
+			delete _m_tmp[i];
+	}
 	return;
 }
 
@@ -54,34 +59,26 @@ void MateriaSource::learnMateria(AMateria *tmp)
 			break;
 		}
 	}
+	std::cout << "learn materia : "<< tmp->getType() << std::endl;
 	_m_tmp[idx_new_pos] = tmp;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
-/*
-Retourne une nouvelle Materia. Celle-ci est une copie de celle apprise
-précédemment par la MateriaSource et dont le type est le même que celui passé en paramètre.
-Retourne 0 si le type est inconnu.
-*/
-	AMateria *tmp;
-
 	for(int i = 0; i < 10; i++)
 	{
-		if (_m_tmp[i]->getType() == type)
+		if (_m_tmp[i] != NULL && _m_tmp[i]->getType() == type)
 		{
-			std::cout << "meme type !!" << type << std::endl;
-
-			if (type == "Ice")
+			AMateria *tmp;
+			if (type == "ice")
 				tmp = new Ice();
-			else if (type == "Cure")
+			else if (type == "cure")
 				tmp = new Cure();
 			else
 				tmp = 0;
 			return tmp;
 		}
 	}
-
-	std::cout << "  type non reconnu pour create new materia " << std::endl;
+	std::cout << "type '"<< type <<"' non reconnu pour create new materia " << std::endl;
 	return 0;
 }

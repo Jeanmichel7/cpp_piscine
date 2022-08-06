@@ -6,13 +6,13 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:44:13 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 05:02:50 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 06:41:33 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure() :_type("cure")
+Cure::Cure() : AMateria("cure")
 {
 	return;
 }

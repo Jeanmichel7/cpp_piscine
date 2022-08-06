@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 00:01:42 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 06:16:59 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 06:36:45 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ void Character::unequip(int idx)
 			break;
 		}
 	}
-	std::cout << "index pos dispo dans track : " << idx_new << std::endl;
+	std::cout << "index pos dispo dans trash : " << idx_new << std::endl;
 
 	if (idx_new == 4)
 	{
@@ -124,13 +124,15 @@ void Character::unequip(int idx)
 		}
 		idx_new = 0;
 	}
-
 	_trash[idx_new] = _item[idx];
 	_item[idx] = NULL;
 }
 
 void Character::use(int idx, ICharacter &target)
 {
-	_item[idx]->use(target);
+	if (_item[idx] != NULL)
+		_item[idx]->use(target);
+	else
+		std::cout << "probleme : item not found" << std::endl;
 }
 

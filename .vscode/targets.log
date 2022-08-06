@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug  5 23:11:55 2022
+# Make data base, printed on Sat Aug  6 06:22:06 2022
 
 # Variables
 
@@ -66,6 +66,7 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
+ 
 # environment
 PWD = /home/jrasser/42/cpp_piscine
 # default
@@ -141,6 +142,7 @@ MAKEFILES :=
 # environment
 LC_ALL = C
 # environment
+ 
 HOSTTYPE = x86_64
 # automatic
 ^F = $(notdir $^)
@@ -204,6 +206,7 @@ makefile:
 
 # Not a target:
 .DEFAULT:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -229,6 +232,6 @@ GNUmakefile:
 # strcache performance: lookups = 24 / hit rate = 12%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=1/24=4%
-# Finished Make data base on Fri Aug  5 23:11:55 2022
+# Finished Make data base on Sat Aug  6 06:22:06 2022
 
  

@@ -6,13 +6,13 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:36:53 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 04:30:41 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/06 06:41:19 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice() :_type("ice")
+Ice::Ice() : AMateria("ice")
 {
 	return;
 }
