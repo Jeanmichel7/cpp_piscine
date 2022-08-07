@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 00:59:53 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/07 16:57:11 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/07 18:43:47 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,14 @@ void		AForm::beSigned(Bureaucrat &b)
 	try {
 		if ( _grad_to_sign && b.getGrade() > _grad_to_sign)
 			throw( AForm::GradeTooLowException() );
-		_is_sign = 1;
+		else
+			_is_sign = 1;
 		//b.signForm(*this);
 	}
 	catch(const std::exception& e) {
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << " to sign '" << getName() << "' ("
+		<< getGradToSign()
+		<< ") by " << b.getName() << "(" << b.getGrade() << ")\n";
 	}
 
 }
