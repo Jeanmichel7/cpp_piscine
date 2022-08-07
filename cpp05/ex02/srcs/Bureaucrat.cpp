@@ -6,12 +6,14 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 23:33:22 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/07 13:58:51 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/07 18:10:00 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #define RED "\033[0;31m"
+#define GRN "\033[0;32m"
 #define END "\033[0m"
+#define UND "\033[4m"
 
 #include "Bureaucrat.h"
 
@@ -83,8 +85,7 @@ void		Bureaucrat::decrementGrade()
 		std::cerr << e.what() << '\n';
 	}
 }
-
-void Bureaucrat::signForm(Form const &f)
+void	Bureaucrat::signForm(AForm const &f)
 {
 	if (f.getIsSign())
 		std::cout << _name << " signed	" << f.getName() << std::endl;
@@ -95,12 +96,44 @@ void Bureaucrat::signForm(Form const &f)
 	}
 }
 
+void	Bureaucrat::executeForm(AForm const &form)
+{
+	try
+	{
+		if (form.getIsSign())
+		{
+			if(_grade <= form.getGradToExec())
+			{
+				std::cout << getName() << " grad ("
+					  << getGrade() << ") " << GRN "execute " END << "'"
+					  << form.getName() << "' (" << form.getGradToExec()
+					  << ")\n";
+				form.execute(*this);
+			}
+			else
+				throw Bureaucrat::GradeTooLowException();
+		}
+		else
+			throw( AForm::FormNotSigned());
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << " to execute '"
+				  << form.getName() << "' (" << form.getGradToExec()
+				  << ") by " << getName() << " grad ("<< getGrade() 
+				  << ")\n";
+	}
+}
+
+
 
 /* OSTREAM */
 
 std::ostream &operator<<(std::ostream &cout, const Bureaucrat &instance)
 {
-	cout << instance.getName()
-		 << ",	bureaucrat grade " << instance.getGrade() << std::endl;
+	cout << UND "Bureaucrat" END << " : "
+		 << instance.getName()
+		 << ", bureaucrat grade " << instance.getGrade()
+		 << std::endl;
 	return (cout);
 }

@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Aug  7 00:16:54 2022
+# Make data base, printed on Sun Aug  7 14:00:35 2022
 
 # Variables
 
@@ -31,7 +31,6 @@ NVM_INC = /home/jrasser/.nvm/versions/node/v16.14.2/include/node
 # makefile
 CURDIR := /home/jrasser/42/cpp_piscine
 # makefile
- 
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
@@ -44,13 +43,10 @@ GNUMAKEFLAGS :=
 # environment
 XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
- 
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
- 
 VSCODE_CWD = /mnt/c/Users/michm/AppData/Local/Programs/Microsoft VS Code
 # default
- 
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
 PATH = /home/jrasser/.vscode-server/bin/da76f93349a72022ca4670c1b84860304616aaa2/bin/remote-cli:/home/jrasser/.local/bin:/home/jrasser/bin:/home/jrasser/.nvm/versions/node/v16.14.2/bin:/home/jrasser/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/michm/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/michm/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/michm/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
@@ -61,7 +57,7 @@ NVM_BIN = /home/jrasser/.nvm/versions/node/v16.14.2/bin
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-ed1b5d0b-40d7-4f97-b421-dfb2ae52ad0a.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-3e3f3e33-5902-47a0-bfaa-edc46ba91733.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -75,11 +71,11 @@ PWD = /home/jrasser/42/cpp_piscine
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/205_interop
+WSL_INTEROP = /run/WSL/8709_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
-WT_SESSION = 8fbdcd1d-6abc-4b00-9ab8-cf9bec1e5054
+WT_SESSION = 46896e65-70ed-437e-94f8-58e841034714
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -92,7 +88,6 @@ LOGNAME = jrasser
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 NVM_CD_FLAGS = 
- 
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -138,7 +133,6 @@ NVM_DIR = /home/jrasser/.nvm
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # environment
- 
 WT_PROFILE_ID = {2c4de342-38b7-51cf-b940-2309a097f518}
 # default
 MAKEFILES := 
@@ -176,7 +170,6 @@ MOTD_SHOWN = update-motd
 # No pattern-specific variable values.
 
 # Directories
- 
 
 # . (device 2080, inode 12196): 13 files, no impossibilities.
 
@@ -191,7 +184,6 @@ MOTD_SHOWN = update-motd
 # Not a target:
 all:
 #  Command line target.
- 
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
@@ -237,6 +229,6 @@ GNUmakefile:
 # strcache performance: lookups = 24 / hit rate = 12%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=1/24=4%
-# Finished Make data base on Sun Aug  7 00:16:54 2022
+# Finished Make data base on Sun Aug  7 14:00:35 2022
 
  
