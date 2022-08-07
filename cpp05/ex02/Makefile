@@ -6,7 +6,7 @@
 #    By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/01 15:24:21 by jrasser           #+#    #+#              #
-#    Updated: 2022/08/07 00:16:42 by jrasser          ###   ########.fr        #
+#    Updated: 2022/08/07 23:02:53 by jrasser          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ clean :
 			@echo "$(GRN) [Clean]$(END) 			$(CHECK)"
 
 fclean :	clean
-			${RM} ${NAME}
+			${RM} ${NAME} ./*_shrubbery
 			@echo "$(GRN) [Fclean]$(END) 			$(CHECK)"
 
 re : 		fclean all
