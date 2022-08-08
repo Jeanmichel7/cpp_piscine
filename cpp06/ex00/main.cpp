@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 02:13:41 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/08 18:28:02 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/08 20:51:25 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 #include <string>
 #include <sstream>
 #include <cstdlib>
+#include <cmath>
 #include "Convert.h"
 
 int	ft_check_literal(std::string str)
 {
 	int 	type = 0;
-	bool	contain_dot = false;
-	bool	contain_f = false;
+	int		nb_dot = 0;
 	int		nb_f = 0;
 	bool	contain_only_num = true;
 	bool	contain_asci = false;
@@ -28,30 +28,26 @@ int	ft_check_literal(std::string str)
 
 	for(i = 0; i < str.length(); i++ )
 	{
-		if ((str[i] < '0' || str[i] > '9') && str[i] != '-')
+		if ((str[i] < '0' || str[i] > '9') || ( i > 0 && (str[i] == '-')))
 			contain_only_num = false;
 		if (str[i] == '.')
-			contain_dot = true;
+			nb_dot ++;
 		if ((str[i] == 'f' || str[i] == 'F'))
-		{
-			contain_f = true;
 			nb_f ++;
-		}
-		if (((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) 
-		&& str[i] != 'f' && str[i] != 'F' && str[i] != '-')
+		if ((((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) 
+		&& str[i] != 'f' && str[i] != 'F') || ( i > 0 && (str[i] == '-')))
 			contain_asci = true;
 	}
-	//std::cout << "contain F : " << contain_f << std::endl;
-	//std::cout << "contain dot : " << contain_dot << std::endl;
+	//std::cout << "nb_dot: " << nb_dot << std::endl;
+	//std::cout << "nb_f: " << nb_f << std::endl;
 	if (contain_only_num)
 		type = 2;
-	if (contain_f && nb_f == 1)
+	if (nb_f == 1 && str[str.length() - 1] == 'f' && nb_dot < 2)
 		type = 3;
-	if (!contain_f && contain_dot && !contain_asci)
+	if (nb_f == 0 && nb_dot < 2 && !contain_asci)
 		type = 4;
 	if (i == 1 && !contain_only_num)
 		type = 1;
-	//std::cout << "Input type : " << type << std::endl;
 	return (type);
 }
 
@@ -68,8 +64,6 @@ float	ft_stof(std::string str)
 {
 	float f;
 	std::istringstream(str) >> f;
-	std::cout << f << std::endl;
-
 	return (f);
 }
 
@@ -138,7 +132,13 @@ int main(int argc, char const *argv[])
 
 	std::cout << "char	 ";
 	if (c == -1)
-		std::cout << "impossible" << std::endl;
+	{
+		
+		if (c < 30 || c > 126)
+			std::cout << "Cannot display" << std::endl;
+		else
+			std::cout << "impossible" << std::endl;
+	}
 	else
 	{
 		if (c < 30 || c > 126)
@@ -149,7 +149,7 @@ int main(int argc, char const *argv[])
 
 	std::cout << "int	 ";
 	if (i == -1)
-		std::cout << "impossible" << std::endl;
+		std::cout << "Impossible" << std::endl;
 	else
 		std::cout << i << std::endl;
 
@@ -159,39 +159,16 @@ int main(int argc, char const *argv[])
 		std::cout << "NaN";
 	else
 		std::cout << f;
+		//std::cout << f << (ceilf(f) == f ? ".0" : "");
 	std::cout << "f" << std::endl;
 
 
 	std::cout << "double	 ";
 	if (d == -1)
-		std::cout << "NaN"  << std::endl;
+		std::cout << "NaN" << std::endl;
 	else
-		std::cout << d  << std::endl;
+		std::cout << d << std::endl;
+		//std::cout << d << (ceilf(d) == d ? ".0" : "") << std::endl;
+
 	return 0;
 }
-
-
-/*
-	char	c = b;
-	int		i = b;
-	float	f = b;
-	double	d = b;
-
-	int valid_c = static_cast<int>(b.getChar());
-	std::cout << "test c : " << valid_c << b.getChar() << std::endl;
-
-	int valid_i = static_cast<int>(b.getInt());
-	std::cout << "test i : " << valid_i << b.getInt() << std::endl;
-
-	int valid_f = static_cast<float>(b.getFloat());
-	std::cout << "test f : " << valid_f << b.getFloat() <<std::endl;
-
-	int valid_d = static_cast<double>(b.getDouble());
-	std::cout << "test d : " << valid_d << b.getDouble() << std::endl;
-
-	std::cout << "char	 " << (valid_c != -1 ? c : 'X') << std::endl;
-	std::cout << "int	 " << (valid_i != -1 ? i : 'X') << std::endl;
-	std::cout << "float	 " << (valid_f != -1 ? f : 'X') << "f" << std::endl;
-	std::cout << "double	 " << (valid_d != -1 ? d : 'X') << std::endl;
-	return 0;
-*/

@@ -6,11 +6,13 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 02:24:37 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/08 18:28:54 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/08 20:57:45 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Convert.h"
+#include <climits>
+
 
 Convert::Convert() : _c(-1), _i(-1), _f(-1), _d(-1), _s("")
 {
@@ -68,12 +70,20 @@ double		Convert::getDouble()	{ return _d; }
 /*  OPERATOR  */
 Convert::operator char()
 {
+	
 	if (_c != -1)
 		return _c;
 	if (_i != -1)
-		return static_cast<char>(_i);
 	{
-		char c  = static_cast<char>(_c);
+		char c  = static_cast<char>(_i);
+		if (c > 31)
+			return c;
+		else
+			return (-1);
+	}
+	if (_f != -1)
+	{
+		char c = static_cast<char>(_f);
 		if (c > 31)
 			return c;
 		else
@@ -95,31 +105,44 @@ Convert::operator int()
 	if (_c != -1)
 		return reinterpret_cast<char>(_c);
 	if (_i != -1)
+	{
+		if (_i < INT_MIN || _i > INT_MAX)
+			return -1;
 		return _i;
+	}
 	if (_f != -1)
+	{
+		if (_f < INT_MIN || _f > INT_MAX)
+			return -1;
 		return static_cast<int>(_f);
+	}
 	if (_d != -1)
+	{
+		if (_d < INT_MIN || _d > INT_MAX)
+			return -1;
 		return static_cast<int>(_d);
+	}
 	return -1;
 }
 
 Convert::operator float()
 {
 	if (_c != -1)
-		return reinterpret_cast<char>(_c);
+		return static_cast<char>(_c);
 	if (_i != -1)
 		return static_cast<float>(_i) ;
 	if (_f != -1)
 		return _f;
 	if (_d != -1)
 		return _d;
+	
 	return -1;
 }
 
 Convert::operator double()
 {
 	if (_c != -1)
-		return reinterpret_cast<char>(_c);
+		return static_cast<char>(_c);
 	if (_i != -1)
 		return static_cast<double>(_i);
 	if (_f != -1)
