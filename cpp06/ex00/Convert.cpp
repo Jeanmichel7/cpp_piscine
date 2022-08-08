@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 02:24:37 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/08 20:57:45 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/08 20:59:56 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ char		Convert::getChar()		{ return _c; }
 int			Convert::getInt()		{ return _i; }
 float		Convert::getFloat()		{ return _f; }
 double		Convert::getDouble()	{ return _d; }
-//std::string	Convert::getString()	{ return _s; }
 
 
 /*  OPERATOR  */
