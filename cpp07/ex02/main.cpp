@@ -6,64 +6,19 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 05:58:41 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/10 00:19:51 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/10 00:33:22 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
+
 #include "Array.hpp"
+#define MAX_VAL 750
+
 int main()
 {
-
-	Array<int>	tab1;
-	tab1.display();
-	
-	Array<int>	tab2(5);
-	tab2.display();
-
-	Array<float>	tab11(7);
-	tab11.display();
-
-	Array<char>	tab3(10);
-	tab3.display();
-
-	Array<char> tab_copie(5);
-	tab_copie.display();
-	std::cout << "tab_copy " << ( tab_copie[0] != tab3[0] ? "different" : "pareil") << " que tab3" << std::endl;
-
-	tab_copie = tab3;
-	std::cout << "tab_copy " << ( tab_copie[0] != tab3[0] ? "different" : "pareil") << " que tab3" << std::endl;
-	
-	
-	tab_copie.modify();
-	tab_copie.display();
-	tab3.display();
-
-
-	Array<int>	tab10(3);
-	tab10.display();
-
-	tab10 = tab2;
-	tab10.display();
-
-	tab10.modify();
-	tab10.display();
-
-	tab2.display();
-	std::cout << "size : " << tab2.size() << std::endl;
-
-	return 0;
-}
-*/
-
-
-
-#include <iostream>
-#include <Array.hpp>
-
-#define MAX_VAL 750
-int main(int, char**)
 {
+	std::cout << "TEST SUBJECT" << std::endl << std::endl;
+
 	Array<int> numbers(MAX_VAL);
 	int* mirror = new int[MAX_VAL];
 	srand(time(NULL));
@@ -79,7 +34,6 @@ int main(int, char**)
 		Array<int> test(tmp);
 	}
 
-	
 	//numbers.display();
 	for (int i = 0; i < MAX_VAL; i++)
 	{
@@ -112,6 +66,49 @@ int main(int, char**)
 		numbers[i] = rand();
 	}
 	delete [] mirror;//
+}
+{
+	std::cout << std::endl << "MY TEST" << std::endl << std::endl;
+
+	Array<int>	tab1;
+	tab1.display();
+	
+	Array<int>	tab2(5);
+	tab2.display();
+
+	Array<float>	tab11(7);
+	tab11.display();
+
+	Array<char>	tab3(10);
+	tab3.display();
+
+	Array<char> tab_copie = tab3;
+	tab_copie.display();
+	std::cout << "tab_copy " << (tab_copie[0] != tab3[0] ? "different" : "pareil") 
+			  << " que tab3" << std::endl << std::endl;
+
+	tab_copie.modify();
+	std::cout << "Modify tab_copie	: ";
+	tab_copie.display();
+	std::cout << "Original array		: ";
+	tab3.display();
+
+
+	Array<int>	tab10(3);
+	tab10.display();
+
+	tab10 = tab2;
+	tab10.display();
+
+	tab10.modify();
+	std::cout << "Modify tab_affect	: ";
+	tab10.display();
+
+	std::cout << "Original array		: ";
+	tab2.display();
+
+	std::cout << "Test member function size() " << std::endl;
+	std::cout << "size : " << tab2.size() << std::endl;
+}
 	return 0;
 }
-

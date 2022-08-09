@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 05:58:17 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/10 00:19:09 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/10 00:25:46 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,7 @@ template< typename T > void Array<T>::display() { // try/catch
 }
 
 template< typename T> void	Array<T>::modify() { // try/catch
-	std::cout << "Modify Array[]" << std::endl;
+	std::cout << "Fct member modify Array[]" << std::endl;
 	for(unsigned i = 0; i < _n; i++) {
 		_tab[i] += 1;
 	}
