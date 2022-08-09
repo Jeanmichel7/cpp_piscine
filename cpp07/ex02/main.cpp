@@ -6,25 +6,33 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 05:58:41 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/09 23:17:18 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/10 00:19:51 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "Array.hpp"
-
 int main()
 {
+
 	Array<int>	tab1;
-	//tab1.display();
+	tab1.display();
 	
 	Array<int>	tab2(5);
 	tab2.display();
 
+	Array<float>	tab11(7);
+	tab11.display();
+
 	Array<char>	tab3(10);
 	tab3.display();
 
-	Array<char> tab_copie = tab3;
+	Array<char> tab_copie(5);
 	tab_copie.display();
+	std::cout << "tab_copy " << ( tab_copie[0] != tab3[0] ? "different" : "pareil") << " que tab3" << std::endl;
+
+	tab_copie = tab3;
+	std::cout << "tab_copy " << ( tab_copie[0] != tab3[0] ? "different" : "pareil") << " que tab3" << std::endl;
 	
 	
 	tab_copie.modify();
@@ -46,8 +54,10 @@ int main()
 
 	return 0;
 }
+*/
 
-/*
+
+
 #include <iostream>
 #include <Array.hpp>
 
@@ -104,4 +114,4 @@ int main(int, char**)
 	delete [] mirror;//
 	return 0;
 }
-*/
+

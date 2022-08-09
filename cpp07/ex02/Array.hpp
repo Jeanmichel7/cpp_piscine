@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 05:58:17 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/09 23:16:27 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/10 00:19:09 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <iostream>
 # include <stdexcept>
 # include <cstdlib>
+# include <typeinfo>
 
 template< typename T >
 class Array
@@ -48,6 +49,11 @@ public:
 	};
 };
 
+
+
+
+/* CONSTRUCTOR */
+
 template<typename T> Array<T>::Array( void )
 {
 	std::cout << "Construct Array[0]" << std::endl;
@@ -57,15 +63,22 @@ template<typename T> Array<T>::Array( void )
 
 template<typename T> Array<T>::Array(unsigned int n)
 {
-	std::cout << "Construct Array[" << n << "]" << std::endl;
+	std::cout << "Construct Array[" << n << "] type : " << typeid(T).name() << std::endl;
+	static int init_rand = 0;
 	_n = n;
 	_tab = new T[_n];
-	for(unsigned i = 0; i < _n; i++) {
-		if (i >= _n)
-			throw (InvalidIndex());
-		_tab[i] = i + 100;
+	
+	srand(init_rand);
+	for (unsigned i = 0; i < _n; i++) {
+		T value;
+		if (typeid(T).name() == typeid(char).name())
+			value = rand() % 26 + 'a';
+		else
+			value = rand();
+		_tab[i] = value;
 	}
 
+	init_rand += 100;
 }
 
 template< typename T > Array<T>::Array(const Array<T> &tmp)
@@ -76,12 +89,20 @@ template< typename T > Array<T>::Array(const Array<T> &tmp)
 	_tab = new T [tmp._n];
 
 	for(unsigned i = 0; i < _n; i++) {
-		if (i >= _n)
-			throw (InvalidIndex());
 		_tab[i] = tmp._tab[i];
 	}
 	return;
 }
+
+template<typename T> Array<T>::~Array()
+{
+	delete [] _tab;
+}
+
+
+
+
+/* OPERATOR */
 
 template< typename T >void  Array<T>::operator=(const Array<T> &tmp){
 	std::cout << "Operator affection" << std::endl;
@@ -91,8 +112,6 @@ template< typename T >void  Array<T>::operator=(const Array<T> &tmp){
 	_tab = new T [tmp._n];
 
 	for(unsigned i = 0; i < _n; i++) {
-		if (i >= _n)
-			throw (InvalidIndex());
 		_tab[i] = tmp._tab[i];
 	}
 	return;
@@ -105,17 +124,19 @@ template< typename T > bool Array<T>::operator!=(T &tmp)
 
 template< typename T > T &Array<T>::operator[](int i)
 {
-
 	if (i >= static_cast<int>(_n) || i < 0)
 		throw (InvalidIndex());
 	else
 		return _tab[i];
 }
 
+
+
+
+/* FCT MEMBER */
+
 template< typename T > void Array<T>::display() { // try/catch
 	for(unsigned i = 0; i < _n; i++) {
-		if (i >= _n)
-			throw (InvalidIndex());
 		std::cout << _tab[i] << " ";
 	} std::cout << std::endl << std::endl;
 }
@@ -123,13 +144,9 @@ template< typename T > void Array<T>::display() { // try/catch
 template< typename T> void	Array<T>::modify() { // try/catch
 	std::cout << "Modify Array[]" << std::endl;
 	for(unsigned i = 0; i < _n; i++) {
-		_tab[i] += 10;
+		_tab[i] += 1;
 	}
 }
 
-template<typename T> Array<T>::~Array()
-{
-	delete [] _tab;
-}
 
 #endif
