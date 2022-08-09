@@ -8,13 +8,12 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug  8 22:03:26 2022
+# Make data base, printed on Tue Aug  9 04:50:13 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
- 
 # automatic
 ?F = $(notdir $?)
 # environment
@@ -24,7 +23,6 @@ WSLENV = ELECTRON_RUN_AS_NODE/w:WT_SESSION::WT_PROFILE_ID
 # environment
 NVM_INC = /home/jrasser/.nvm/versions/node/v16.14.2/include/node
 # automatic
- 
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
@@ -59,8 +57,7 @@ NVM_BIN = /home/jrasser/.nvm/versions/node/v16.14.2/bin
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-3e3f3e33-5902-47a0-bfaa-edc46ba91733.sock
- 
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-3b8d316e-4d85-48dd-bff3-201283b65fcc.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -74,17 +71,16 @@ PWD = /home/jrasser/42/cpp_piscine
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/8709_interop
+WSL_INTEROP = /run/WSL/475_interop
 # environment
 PULSE_SERVER = /mnt/wslg/PulseServer
 # environment
-WT_SESSION = 46896e65-70ed-437e-94f8-58e841034714
+WT_SESSION = 7b88a6db-b499-42e8-ae39-c838478ae8e4
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/jrasser
 # environment
- 
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 LOGNAME = jrasser
@@ -92,14 +88,10 @@ LOGNAME = jrasser
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 NVM_CD_FLAGS = 
- 
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
- 
 # automatic
- 
 ^D = $(patsubst %/,%,$(dir $^))
- 
 # environment
 MAKELEVEL := 0
 # default
@@ -168,10 +160,8 @@ LANG = C
 TERM = xterm-256color
 # environment
 WSL_DISTRO_NAME = Ubuntu
-# environment
-MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=75/1024=7%, Rehash=0, Collisions=6/97=6%
+# Load=74/1024=7%, Rehash=0, Collisions=6/96=6%
 
 # Pattern-specific Variable Values
 
@@ -209,9 +199,7 @@ makefile:
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
- 
 
- 
 # Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
@@ -226,7 +214,6 @@ GNUmakefile:
 #  Failed to be updated.
 
 # files hash-table stats:
- 
 # Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
 # VPATH Search Paths
 
@@ -240,6 +227,6 @@ GNUmakefile:
 # strcache performance: lookups = 24 / hit rate = 12%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=1/24=4%
-# Finished Make data base on Mon Aug  8 22:03:26 2022
+# Finished Make data base on Tue Aug  9 04:50:13 2022
 
  
