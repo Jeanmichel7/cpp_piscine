@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 21:43:08 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/03 19:34:36 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/10 19:49:50 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define GRY	"\e[1;30m"
-#define END	"\e[0m"
+#define GRY	"\033[1;30m"
+#define END	"\033[0m"
 
 #include "ScavTrap.hpp"
 

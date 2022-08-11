@@ -6,12 +6,12 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:11 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/05 19:47:32 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 14:39:11 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define BLU "\e[0;34m"
-#define END "\e[0m"
+#define BLU "\033[0;34m"
+#define END "\033[0m"
 
 #include "Cat.hpp"
 #include "Animal.hpp"
@@ -20,10 +20,11 @@
 /* Canonique */
 Cat::Cat() : Animal()
 {
-	static int i = 0;
 	std::cout << "Constructor Cat" << std::endl;
+	
+	static int i = 0;
 	_type = "Cat";
-	_ptr_brain = new Brain();
+	Brain *_ptr_brain = new Brain();
 	_ptr_brain->setIdea1(i);
 	i++;
 	return;
@@ -45,13 +46,13 @@ void	Cat::operator =(Cat const &tmp)
 }
 
 
-
+/* Fct member */
 std::string Cat::getType() const
 {
 	return (_type);
 }
 
-Brain *Cat::AGetBrain() const
+const Brain *Cat::AGetBrain()
 {
 	return (_ptr_brain);
 }

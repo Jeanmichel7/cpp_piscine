@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 00:05:16 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/03 19:32:16 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/10 19:49:44 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define GRY	"\e[1;30m"
-#define END	"\e[0m"
+#define GRY	"\033[1;30m"
+#define END	"\033[0m"
 
 #include "FragTrap.hpp"
 

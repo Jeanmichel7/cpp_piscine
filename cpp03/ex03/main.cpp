@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:21:06 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/03 20:02:55 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/10 19:57:52 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 #include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
 
-#define UNDER "\e[4m"
-#define END	"\e[0m"
+#define UNDER "\033[4m"
+#define END	"\033[0m"
 
 int	main(void)
 {

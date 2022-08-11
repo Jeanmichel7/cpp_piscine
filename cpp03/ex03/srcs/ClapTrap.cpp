@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:21:38 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/03 19:51:04 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/10 19:50:29 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-#define GRN	"\e[0;32m"
-#define RED	"\e[0;31m"
-#define CYN	"\e[0;36m"
-#define GRY	"\e[1;30m"
-#define END	"\e[0m"
-#define UNDERLINE "\e[4m"
+#define GRN	"\033[0;32m"
+#define RED	"\033[0;31m"
+#define CYN	"\033[0;36m"
+#define GRY	"\033[1;30m"
+#define END	"\033[0m"
+#define UNDERLINE "\033[4m"
 
 
 /* CONSTRUCTOR */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Materiasource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 02:21:28 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 13:59:14 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 14:31:48 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #define BLU "\033[0;34m"
 #define TST2 "\033[0;35m"
 #define END "\033[0m"
-#define UND "\e[4m"
+#define UND "\033[4m"
 
 #include "Materiasource.hpp"
 

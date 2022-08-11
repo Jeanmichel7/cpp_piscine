@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 18:43:25 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/04 17:27:29 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/04 17:29:24 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	fct_extern(Zombie *zombie) {
 	zombie->announce();
 }
-
 
 int main() {
 	Zombie	instance("Zombie");

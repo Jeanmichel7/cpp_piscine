@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:09 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/06 14:10:50 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 14:31:48 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define GRN "\033[0;32m"
 #define RED "\033[0;31m"
 #define END "\033[0m"
-#define UND "\e[4m"
+#define UND "\033[4m"
 
 #include "Amateria.hpp"
 #include "Ice.hpp"

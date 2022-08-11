@@ -2,21 +2,21 @@ make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/jrasser/42/cpp_piscine/cpp04/ex02'
 mkdir -p objs/
 g++ -I. -I./class -o objs/main.o -c main.cpp -std=c++98 -Wall -Wextra -g -fsanitize=address
-printf	"\e[2K\r \e[0;34m[BUILD] 'main.cpp' \e[0m"
+printf	"\033[2K\r \033[0;34m[BUILD] 'main.cpp' \033[0m"
 mkdir -p objs/
 g++ -I. -I./class -o objs/Cat.o -c srcs/Cat.cpp -std=c++98 -Wall -Wextra -g -fsanitize=address
-printf	"\e[2K\r \e[0;34m[BUILD] 'srcs/Cat.cpp' \e[0m"
+printf	"\033[2K\r \033[0;34m[BUILD] 'srcs/Cat.cpp' \033[0m"
 mkdir -p objs/
 g++ -I. -I./class -o objs/Dog.o -c srcs/Dog.cpp -std=c++98 -Wall -Wextra -g -fsanitize=address
-printf	"\e[2K\r \e[0;34m[BUILD] 'srcs/Dog.cpp' \e[0m"
+printf	"\033[2K\r \033[0;34m[BUILD] 'srcs/Dog.cpp' \033[0m"
 mkdir -p objs/
 g++ -I. -I./class -o objs/Brain.o -c srcs/Brain.cpp -std=c++98 -Wall -Wextra -g -fsanitize=address
-printf	"\e[2K\r \e[0;34m[BUILD] 'srcs/Brain.cpp' \e[0m"
+printf	"\033[2K\r \033[0;34m[BUILD] 'srcs/Brain.cpp' \033[0m"
 mkdir -p objs/
 g++ -I. -I./class -o objs/Animal.o -c srcs/Animal.cpp -std=c++98 -Wall -Wextra -g -fsanitize=address
-printf	"\e[2K\r \e[0;34m[BUILD] 'srcs/Animal.cpp' \e[0m"
+printf	"\033[2K\r \033[0;34m[BUILD] 'srcs/Animal.cpp' \033[0m"
 g++ objs/main.o objs/Cat.o objs/Dog.o objs/Brain.o objs/Animal.o -o prog -std=c++98 -Wall -Wextra -g -fsanitize=address
-echo "\e[2K\r\e[0;32m [Successfully compiled]\e[0m	✓ \n"
+echo "\033[2K\r\033[0;32m [Successfully compiled]\033[0m	✓ \n"
 echo "executable ./prog"
 make: Leaving directory '/home/jrasser/42/cpp_piscine/cpp04/ex02'
  

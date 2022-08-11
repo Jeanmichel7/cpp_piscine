@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:09 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/05 19:13:28 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 14:38:35 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class Cat : public Animal
 {
 
-protected:
-	std::string _type;
+//protected:
+//	std::string _type;
 	
 public:
 	Cat();

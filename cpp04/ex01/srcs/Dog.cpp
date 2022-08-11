@@ -6,12 +6,12 @@
 /*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:21:59 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/05 19:47:36 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 14:31:48 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define BLU "\e[0;34m"
-#define END "\e[0m"
+#define BLU "\033[0;34m"
+#define END "\033[0m"
 
 #include "Dog.hpp"
 #include "Animal.hpp"

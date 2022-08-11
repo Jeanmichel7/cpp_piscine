@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:21:06 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/05 12:06:34 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/10 19:50:08 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-#define UNDER "\e[4m"
-#define BLD "\e[1m"
-#define END	"\e[0m"
-#define BLU	"\e[1;34m"
+#define UNDER "\033[4m"
+#define BLD "\033[1m"
+#define END	"\033[0m"
+#define BLU	"\033[1;34m"
 
 
 
