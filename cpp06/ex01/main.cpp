@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 21:49:44 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/08 22:16:53 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 19:59:57 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,16 @@ int main()
 {
 	Data 		data = Data();
 	Data 		*ptr_data = &data;
-	//Data 		*ptr_data = new Data();
 	uintptr_t 	ret1;
 	Data 		*ptr_retour;
 
 	std:: cout << data << std::endl;
-	printf("adresse pointeur ptr_data	: %p\n", ptr_data);
+	std::cout << "Adresse pointeur ptr_data	:" << ptr_data << std::endl;
 
 	ret1 = serialize(ptr_data);
 	ptr_retour = deserialize(ret1);
 
-	printf("adresse pointeur ptr_retour	: %p\n", ptr_retour);
-
-	//delete ptr_data;
+	std::cout << "Adresse pointeur ptr_retour	:" << ptr_retour << std::endl;
 	return 0;
 }
 

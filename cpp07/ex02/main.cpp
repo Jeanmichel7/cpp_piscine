@@ -6,18 +6,18 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 05:58:41 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/10 00:33:22 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 21:31:34 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#define MAX_VAL 750
 
 #include "Array.hpp"
-#define MAX_VAL 750
 
 int main()
 {
 {
-	std::cout << "TEST SUBJECT" << std::endl << std::endl;
+	std::cout << BLU "TEST SUBJECT" END << std::endl << std::endl;
 
 	Array<int> numbers(MAX_VAL);
 	int* mirror = new int[MAX_VAL];
@@ -44,31 +44,26 @@ int main()
 			return 1;
 		}
 	}
-	try
-	{
+	try {
 		numbers[-2] = 0;
 	}
-	catch(const std::exception& e)
-	{
+	catch(const std::exception& e) {
 		std::cerr << e.what() << '\n';
 	}
-	try
-	{
+	try {
 		numbers[MAX_VAL] = 0;
 	}
-	catch(const std::exception& e)
-	{
+	catch(const std::exception& e) {
 		std::cerr << e.what() << '\n';
 	}
 
-	for (int i = 0; i < MAX_VAL; i++)
-	{
+	for (int i = 0; i < MAX_VAL; i++) {
 		numbers[i] = rand();
 	}
 	delete [] mirror;//
 }
 {
-	std::cout << std::endl << "MY TEST" << std::endl << std::endl;
+	std::cout << std::endl << BLU "MY TEST" END << std::endl << std::endl;
 
 	Array<int>	tab1;
 	tab1.display();
@@ -84,8 +79,8 @@ int main()
 
 	Array<char> tab_copie = tab3;
 	tab_copie.display();
-	std::cout << "tab_copy " << (tab_copie[0] != tab3[0] ? "different" : "pareil") 
-			  << " que tab3" << std::endl << std::endl;
+	std::cout << "TEST tab_copy : " << (tab_copie[0] != tab3[0] ? "different" : "pareil") 
+			  << " que Array[10]" << std::endl << std::endl;
 
 	tab_copie.modify();
 	std::cout << "Modify tab_copie	: ";

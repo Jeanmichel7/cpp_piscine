@@ -6,14 +6,16 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 05:58:17 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/10 00:25:46 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 21:30:33 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __ARRAY__
 # define __ARRAY__
 
+# define BLU "\033[0;34m"
 # define RED "\033[0;31m"
+# define GRN "\033[0;32m"
 # define END "\033[0m"
 
 # include <iostream>
@@ -56,14 +58,14 @@ public:
 
 template<typename T> Array<T>::Array( void )
 {
-	std::cout << "Construct Array[0]" << std::endl;
+	std::cout << GRN "Construct Array[0]" END << std::endl;
 	_n = 0;
 	_tab = new T[_n];
 }
 
 template<typename T> Array<T>::Array(unsigned int n)
 {
-	std::cout << "Construct Array[" << n << "] type : " << typeid(T).name() << std::endl;
+	std::cout << GRN "Construct Array[" << n << "] type : " << typeid(T).name() << END << std::endl;
 	static int init_rand = 0;
 	_n = n;
 	_tab = new T[_n];
@@ -83,7 +85,7 @@ template<typename T> Array<T>::Array(unsigned int n)
 
 template< typename T > Array<T>::Array(const Array<T> &tmp)
 {
-	std::cout << "Construct Copy Array[" << tmp._n << "]" << std::endl;
+	std::cout << GRN "Construct Copy Array[" << tmp._n << "]" END<< std::endl;
 
 	_n = tmp._n;
 	_tab = new T [tmp._n];
@@ -105,7 +107,7 @@ template<typename T> Array<T>::~Array()
 /* OPERATOR */
 
 template< typename T >void  Array<T>::operator=(const Array<T> &tmp){
-	std::cout << "Operator affection" << std::endl;
+	std::cout << GRN "Operator affection" END << std::endl;
 
 	delete [] _tab;
 	_n = tmp._n;
@@ -142,7 +144,7 @@ template< typename T > void Array<T>::display() { // try/catch
 }
 
 template< typename T> void	Array<T>::modify() { // try/catch
-	std::cout << "Fct member modify Array[]" << std::endl;
+	std::cout << GRN "Fct member modify Array[]" END << std::endl;
 	for(unsigned i = 0; i < _n; i++) {
 		_tab[i] += 1;
 	}

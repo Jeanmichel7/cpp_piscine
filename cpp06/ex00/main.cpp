@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 02:13:41 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/11 19:28:55 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 20:04:53 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,6 @@ int main(int argc, char const *argv[])
 		}
 		std::cout << f;
 	}
-		//std::cout << f << (ceilf(f) == f ? ".0" : "");
 	std::cout << "f" << std::endl;
 
 
@@ -83,8 +82,6 @@ int main(int argc, char const *argv[])
 		std::cout << "NaN" << std::endl;
 	else
 		std::cout << d << std::endl;
-		//std::cout << d << (ceilf(d) == d ? ".0" : "") << std::endl;
-
 	return 0;
 }
 

@@ -6,13 +6,12 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 02:24:37 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/11 17:10:49 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 20:04:13 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Convert.h"
 #include <climits>
-
 
 Convert::Convert() : _c(-1), _i(-1), _f(-1), _d(-1), _s("")
 { return; }

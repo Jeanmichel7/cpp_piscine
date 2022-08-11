@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 22:20:17 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/08 23:20:05 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 20:03:30 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,22 @@
 #include <ctime>
 #include <cstdlib>
 #include <exception>
-//#include <typeinfo>
 
 #include "Base.hpp"
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
 
-Base * generate(void);
-void identify(Base* p);
-void identify(Base& p);
+Base	*generate(void);
+void	identify(Base* p);
+void	identify(Base& p);
 
 int main()
 {
 	Base *p_base = generate();
 	
-
 	identify(p_base);
 	identify(*p_base);
-
 
 	delete p_base;
 	return 0;
@@ -43,15 +40,16 @@ Base * generate(void)
 	Base 	*p_base;
 	int 	random;
 
+	p_base = NULL;
 	std::srand(std::time(NULL));
 	random = std::rand();
 
 	if (random % 3 == 0)
-		{ p_base = new A(); std::cout << "creat A" << std::endl; }
+		{ p_base = new A(); std::cout << "Creat A" << std::endl; }
 	else if (random % 3 == 1)
-		{ p_base = new B(); std::cout << "creat B" << std::endl; }
+		{ p_base = new B(); std::cout << "Creat B" << std::endl; }
 	else if (random % 3 == 2)
-		{ p_base = new C(); std::cout << "creat C" << std::endl; }
+		{ p_base = new C(); std::cout << "Creat C" << std::endl; }
 	return (p_base);
 }
 
@@ -77,19 +75,19 @@ void identify(Base& p)
 	C classC;
 
 	try {
-		dynamic_cast<A&>(p);
+		(void)dynamic_cast<A&>(p);
 		a = 1;
 	}
 	catch(const std::exception& e) {}
 
 	try {
-		dynamic_cast<B&>(p);
+		(void)dynamic_cast<B&>(p);
 		b = 1;
 	}
 	catch(const std::exception& e) {}
 
 	try {
-		dynamic_cast<C&>(p);
+		(void)dynamic_cast<C&>(p);
 		c = 1;
 	}
 	catch(const std::exception& e) {}
