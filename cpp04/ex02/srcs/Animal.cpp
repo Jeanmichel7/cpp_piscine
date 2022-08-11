@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:02 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/11 14:31:48 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 15:25:17 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,4 @@ std::string Animal::getType() const
 void	Animal::makeSound() const
 {
 	std::cout << GRN "🔊 No sound specific" END << std::endl;
-}
-
-Brain *Animal::AGetBrain() const
-{
-	return (_ptr_brain);
 }

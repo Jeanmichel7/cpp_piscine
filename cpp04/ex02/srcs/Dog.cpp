@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:21:59 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/11 14:31:48 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 15:46:28 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 
 /* Canonique */
-Dog::Dog() : _type("Dog")
+Dog::Dog() : Animal()
 {
 	static int i = 0;
 	std::cout << "Constructor Dog" << std::endl;

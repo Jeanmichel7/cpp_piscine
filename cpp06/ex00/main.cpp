@@ -6,11 +6,12 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 02:13:41 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/08 21:09:01 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 19:28:55 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include <sstream>
 #include <cstdlib>
@@ -64,8 +65,15 @@ int main(int argc, char const *argv[])
 	std::cout << "float	 ";
 	if (f == -1)
 		std::cout << "NaN";
-	else
+	else 
+	{
+		if (ceilf(f) == f)
+		{
+			std::cout.setf( std::ios::fixed, std:: ios::floatfield );
+			std::cout.precision(1);
+		}
 		std::cout << f;
+	}
 		//std::cout << f << (ceilf(f) == f ? ".0" : "");
 	std::cout << "f" << std::endl;
 
@@ -103,7 +111,7 @@ int	ft_check_literal(std::string str)
 	}
 	if (contain_only_num)
 		type = 2;
-	if (nb_f == 1 && str[str.length() - 1] == 'f' && nb_dot < 2)
+	if (nb_f == 1 && (str[str.length() - 1] == 'f' || str[str.length() - 1] == 'F' ) && nb_dot < 2)
 		type = 3;
 	if (nb_f == 0 && nb_dot < 2 && !contain_asci)
 		type = 4;
@@ -114,9 +122,9 @@ int	ft_check_literal(std::string str)
 
 int	ft_stoi(std::string str)
 {
-	std::stringstream degree(str);
-
 	int x = 0;
+	
+	std::stringstream degree(str);
 	degree >> x;
 	return x;
 }
@@ -124,7 +132,8 @@ int	ft_stoi(std::string str)
 float	ft_stof(std::string str)
 {
 	float f;
-	std::istringstream(str) >> f;
+	
+	f = ::atof(str.c_str());
 	return (f);
 }
 

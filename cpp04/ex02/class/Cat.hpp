@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:09 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/05 22:09:07 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 15:21:47 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,15 @@
 class Cat : public Animal
 {
 
-protected:
-	std::string _type;
-	
 public:
 	Cat();
 	Cat(Cat const &);
-	virtual ~Cat();
+	~Cat();
 	void operator =(Cat const &);
 	
 	std::string	getType() const;
 	Brain		*AGetBrain() const;
 	void		makeSound() const;
-	
 };
 
 #endif

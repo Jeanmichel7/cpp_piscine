@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:11 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/11 14:31:48 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 15:47:00 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@
 /* Canonique */
 Cat::Cat() : Animal()
 {
-	static int i = 0;
 	std::cout << "Constructor Cat" << std::endl;
+	
+	static int i = 0;
 	_type = "Cat";
 	_ptr_brain = new Brain();
 	_ptr_brain->setIdea1(i);
@@ -45,7 +46,7 @@ void	Cat::operator =(Cat const &tmp)
 }
 
 
-
+/* Fct member */
 std::string Cat::getType() const
 {
 	return (_type);

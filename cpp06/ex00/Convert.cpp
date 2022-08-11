@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 02:24:37 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/08 20:59:56 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 17:10:49 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,48 +15,33 @@
 
 
 Convert::Convert() : _c(-1), _i(-1), _f(-1), _d(-1), _s("")
-{
-	return;
-}
+{ return; }
 Convert::Convert(char const c) : _c(c),_i(-1), _f(-1), _d(-1), _s("")
-{
-	return;
-}
+{ return; }
 Convert::Convert(int const i) : _c(-1), _i(i), _f(-1), _d(-1), _s("")
-{
-	return;
-}
+{ return; }
 Convert::Convert(float const f) : _c(-1), _i(-1), _f(f), _d(-1), _s("")
-{
-	return;
-}
+{ return; }
 Convert::Convert(double const d) : _c(-1), _i(-1), _f(-1), _d(d), _s("")
-{
-	return;
-}
+{ return; }
 Convert::Convert(std::string s) : _c(-1), _i(-1), _f(-1), _d(-1), _s(s)
-{
-	return;
-}
+{ return; }
 Convert::~Convert()
-{
-	return;
-}
+{ return; }
 Convert::Convert(Convert const &tmp) : 
 _c(tmp._c), _i(tmp._i), _f(tmp._f), _d(tmp._d), _s(tmp._s)
-{
-	return;
-}
+{ return; }
+
 void	Convert::operator = (Convert const &tmp)
 {
 	const_cast<char&>(_c) = tmp._c;
 	const_cast<int&>(_i) = tmp._i;
 	const_cast<float&>(_f) = tmp._f;
 	const_cast<double&>(_d) = tmp._d;
-	const_cast<double&>(_d) = tmp._d;
 	const_cast<std::string&>(_s) = tmp._s;
 	return;
 }
+
 
 
 /* FCT MEMBRE */
@@ -64,6 +49,7 @@ char		Convert::getChar()		{ return _c; }
 int			Convert::getInt()		{ return _i; }
 float		Convert::getFloat()		{ return _f; }
 double		Convert::getDouble()	{ return _d; }
+
 
 
 /*  OPERATOR  */

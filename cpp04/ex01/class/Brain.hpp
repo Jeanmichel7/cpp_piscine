@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 01:38:29 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/05 19:57:59 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 15:20:14 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@
 #include <iostream>
 #include <string>
 
-
 class Brain
 {
 
 private:
-	std::string _ideas[100];
+	std::string *_ideas;
 
 public:
 	Brain();
@@ -30,7 +29,7 @@ public:
 	~Brain();
 
 	void		setIdea1( int idea);
-	std::string getIdea1();
+	std::string getIdea1() const;
 };
 
 

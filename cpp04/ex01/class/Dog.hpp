@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:06 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/05 19:17:10 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/11 15:44:25 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,15 @@
 class Dog : public Animal
 {
 
-private:
-	Brain *_ptr_brain;
-	
-protected:
-	std::string _type;
-	
 public:
 	Dog();
 	Dog(Dog const &);
-	virtual ~Dog();
+	~Dog();
 	void operator =(Dog const &);
 	
 	std::string	getType() const;
 	Brain		*AGetBrain() const;
 	void		makeSound() const;
-	
 };
 
 #endif
