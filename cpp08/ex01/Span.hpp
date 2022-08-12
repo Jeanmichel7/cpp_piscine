@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 13:28:56 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/12 15:54:43 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/12 16:33:15 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define __SPAN__
 
 # define RED "\033[0;31m"
+# define BLU "\033[0;34m"
 # define END "\033[0m"
 
 # include <iostream>
@@ -34,7 +35,7 @@ public:
 	Span(unsigned int n);
 	~Span();
 	Span(Span const &);
-	void	operator = (Span const &);
+	Span	&operator = (Span &);
 
 	void			display();
 	void			display_resume();

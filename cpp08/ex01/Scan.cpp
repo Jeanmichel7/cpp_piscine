@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 13:28:58 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/12 15:56:36 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/12 16:25:45 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,19 @@ Span::Span(unsigned int n) : _n(n)
 Span::~Span()
 { return; }
 
-Span::Span(Span const &tmp)
+Span::Span(Span const &tmp) : _n(tmp._n), _stock(tmp._stock)
+{ return ; }
+
+Span	&Span::operator = (Span &tmp)
 {
-	_n = tmp._n;
-	_stock = tmp._stock;
-	return ;
-}
-void	Span::operator = (Span const &tmp)
-{
-	(void) tmp;
 	//del ancien stock
+	_stock.clear();
 
-	//creer nouveau
+	//fill new
+	for( typename std::vector<int>::iterator it = tmp._stock.begin(); it != tmp._stock.end(); ++it )
+		_stock.push_back(*it);
 
-	// remplir nouveau
+	return *this;
 }
 
 
