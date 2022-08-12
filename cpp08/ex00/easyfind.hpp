@@ -6,15 +6,25 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 11:50:02 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/12 13:05:23 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/12 13:14:36 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __EASYFIND__
 # define __EASYFIND__
 
+# define RED "\033[0;31m"
+# define END "\033[0m"
+
 # include <vector>
 # include <iostream>
+
+class OccurenceNotFound : public std::exception {
+public:
+	virtual const char* what() const throw() {
+		return (RED "Error : Occurence not found" END);
+	}
+};
 
 
 template< typename T >
@@ -29,14 +39,21 @@ void	display_container( std::vector<T> &v1 )
 
 
 template< typename T >
-int 	easyfind( std::vector<T> &v1, int i )
+int 	easyfind( std::vector<T> &v1, const int i )
 {
-	for ( typename std::vector<T>::iterator it = v1.begin(); it != v1.end(); ++it )
-	{
-		if ( *it == i )
-			return it - v1.begin();
+	try {
+		for ( typename std::vector<T>::iterator it = v1.begin(); it != v1.end(); ++it )
+		{
+			if ( *it == i )
+				return it - v1.begin();
+		}
+		throw OccurenceNotFound();
 	}
-	return -1;
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+		return -1;
+	}
 }
 
 

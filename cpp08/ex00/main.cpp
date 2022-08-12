@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 11:50:00 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/12 13:05:20 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/12 13:14:44 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int main( void )
 	
 	first_occur = ::easyfind(v1, search_int);
 	std::cout << "First occurence of '" << search_int << "' : " << first_occur << std::endl;
+
 
 	search_int = 7;
 	first_occur = ::easyfind(v1, search_int);
