@@ -6,7 +6,7 @@
 /*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 11:50:02 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/12 13:14:36 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/12 13:16:08 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,5 @@ int 	easyfind( std::vector<T> &v1, const int i )
 		return -1;
 	}
 }
-
 
 #endif
