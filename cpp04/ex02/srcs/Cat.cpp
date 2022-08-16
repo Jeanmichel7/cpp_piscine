@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:11 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/11 15:47:00 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/16 16:17:02 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 #define END "\033[0m"
 
 #include "Cat.hpp"
-#include "Animal.hpp"
-#include "Brain.hpp"
 
 /* Canonique */
 Cat::Cat() : Animal()
@@ -31,17 +29,32 @@ Cat::Cat() : Animal()
 }
 Cat::Cat(Cat const &tmp) : Animal(tmp)
 {
+	std::cout << "Constructor de copie Cat" << std::endl;
+	
+	static int i = 0;
+	_ptr_brain = new Brain();
+	_ptr_brain->setIdea1( i );
+	i++;
+
 	return;
 }
 Cat::~Cat()
 {
-	std::cout << "Destrutor Cat" << std::endl;
 	delete _ptr_brain;
+	std::cout << "Destrutor Cat" << std::endl;
 	return;
 }
 void	Cat::operator =(Cat const &tmp)
 {
+	std::cout << "Constructor d'affectation Cat" << std::endl;
+
 	_type = tmp._type;
+
+	static int i = 0;
+	_ptr_brain = new Brain();
+	_ptr_brain->setIdea1( i );
+	i++;
+	
 	return;
 }
 

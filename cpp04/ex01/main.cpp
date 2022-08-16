@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:24 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/11 16:04:51 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/16 16:11:02 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,7 @@
 /*
 int main()
 {
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
-	delete j; // should not create a leak
-	delete i;
+	
 
 	return 0;
 }
@@ -35,6 +32,21 @@ int main()
 
 int main()
 {
+/*
+	Dog basic;
+	{
+		Dog tmp = basic;
+	}
+*/
+
+/*
+		const Animal *j = new Dog();
+		const Animal *i = new Cat();
+		delete j; // should not create a leak
+		delete i;
+*/
+
+
 	std::cout  << std::endl << UND "Construct Animals" END << std::endl << std::endl;
 	Animal *tab[100];
 
@@ -59,6 +71,7 @@ int main()
 	std::cout << std::endl << UND "Destroy Animals" END << std::endl << std::endl;
 	for(int i =0; i < 100; i++)
 		delete tab[i];
+
 
 
 	return 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 01:38:29 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/11 15:20:14 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/16 16:02:01 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 	void	operator =(Brain const &);
 	~Brain();
 
-	void		setIdea1( int idea);
+	void		setIdea1( int idea );
 	std::string getIdea1() const;
 };
 

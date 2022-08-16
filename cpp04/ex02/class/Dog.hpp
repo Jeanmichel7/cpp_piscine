@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 21:22:06 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/11 15:44:25 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/16 16:15:33 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 class Dog : public Animal
 {
+	Brain 		*_ptr_brain;
 
 public:
 	Dog();
