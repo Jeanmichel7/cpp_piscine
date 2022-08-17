@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.h                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 14:04:41 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/07 21:58:32 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/17 19:45:10 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include "Aform.h"
 #include <cstdio>
-#include <bits/stdc++.h> 
 
 class ShrubberyCreationForm : public AForm
 {

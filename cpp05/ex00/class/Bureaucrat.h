@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 23:33:24 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/07 01:28:09 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/17 15:01:05 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ public:
 	public:
 		virtual const char* what() const throw()
 		{
-			return (RED "Error : Grade too low" END);
+			return (RED "Grade too low" END);
 		}
 	};
 
@@ -50,7 +50,7 @@ public:
 	public:
 		virtual const char* what() const throw()
 		{
-			return (RED "Error : Grade too hight" END);
+			return (RED "Grade too hight" END);
 		}
 	};
 
