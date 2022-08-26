@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Scan.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 13:28:58 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/12 16:25:45 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/26 16:21:56 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Span	&Span::operator = (Span &tmp)
 	_stock.clear();
 
 	//fill new
-	for( typename std::vector<int>::iterator it = tmp._stock.begin(); it != tmp._stock.end(); ++it )
+	for( std::vector<int>::iterator it = tmp._stock.begin(); it != tmp._stock.end(); ++it )
 		_stock.push_back(*it);
 
 	return *this;
@@ -44,7 +44,7 @@ Span	&Span::operator = (Span &tmp)
 void			Span::display()
 {
 	std::cout << "Stock contains:";
-	for (typename std::vector<int>::iterator it = _stock.begin(); it != _stock.end(); ++it)
+	for (std::vector<int>::iterator it = _stock.begin(); it != _stock.end(); ++it)
 		std::cout << ' ' << *it;
 	std::cout << '\n';
 }
@@ -55,7 +55,7 @@ void			Span::display_resume()
 	unsigned int	i = 0;
 
 	std::cout << "Stock resume contains:";
-	for (typename std::vector<int>::iterator it = _stock.begin(); it != _stock.end(); ++it) {
+	for (std::vector<int>::iterator it = _stock.begin(); it != _stock.end(); ++it) {
 		if (i < 10 || i > _stock.size() - 10)
 			std::cout << ' ' << *it;
 		else if (!is_inter)
@@ -104,11 +104,11 @@ unsigned int	Span::shortestSpan()
 	if (_n <= 1)
 		throw Span::ContainerEmpty();
 	
-	for( typename std::vector<int>::iterator i = _stock.begin(); i != _stock.end(); ++i ){
-		for( typename std::vector<int>::iterator j = i + 1; j != _stock.end(); ++j ){
+	for( std::vector<int>::iterator i = _stock.begin(); i != _stock.end(); ++i ){
+		for( std::vector<int>::iterator j = i + 1; j != _stock.end(); ++j ){
 
 			//std::cout << *i << " - " << *j << " = " << std::abs(*i - *j) << std::endl;
-			if (std::abs(*i - *j) < dist_min)
+			if ((unsigned int)std::abs(*i - *j) < dist_min)
 			{
 				dist_min = std::abs(*i - *j);
 			}
@@ -127,11 +127,11 @@ unsigned int	Span::longestSpan()
 	if (_n <= 1)
 		throw Span::ContainerEmpty();
 	
-	for( typename std::vector<int>::iterator i = _stock.begin(); i != _stock.end(); ++i ){
-		for( typename std::vector<int>::iterator j = i + 1; j != _stock.end(); ++j ){
+	for( std::vector<int>::iterator i = _stock.begin(); i != _stock.end(); ++i ){
+		for( std::vector<int>::iterator j = i + 1; j != _stock.end(); ++j ){
 
 			//std::cout << *i << " - " << *j << " = " << std::abs(*i - *j) << std::endl;
-			if (std::abs(*i - *j) > dist_max)
+			if ((unsigned int)std::abs(*i - *j) > dist_max)
 			{
 				dist_max = std::abs(*i - *j);
 			}

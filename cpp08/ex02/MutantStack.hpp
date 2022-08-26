@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrasser <jrasser@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: jrasser <jrasser@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 16:46:26 by jrasser           #+#    #+#             */
-/*   Updated: 2022/08/12 21:06:05 by jrasser          ###   ########.fr       */
+/*   Updated: 2022/08/26 16:23:40 by jrasser          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,14 @@ template< typename T, typename C> MutantStack<T, C>::MutantStack(MutantStack con
 template< typename T, typename C> void MutantStack<T, C>::operator = (MutantStack const &tmp) {
 
 	// delete old
-	iterator it = this.begin();
-	while(it != this.end())
+	iterator it = this->begin();
+	while(it != this->end())
 	{
-		this.pop();
+		this->pop();
 		++it;
 	}
 
-	this.c = tmp.c;
+	this->c = tmp.c;
 }
 
 
